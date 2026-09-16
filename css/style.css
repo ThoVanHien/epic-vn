@@ -183,29 +183,128 @@ ul {
 
 .mobile-toggle {
   display: none;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
 }
 
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Thu Phóng (Scale & Zoom Transition) */
 .mobile-menu {
-  display: none;
-  background: var(--primary-dark);
-  padding: 16px 24px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  right: 16px;
+  background: rgba(7, 51, 58, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 20px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 168, 181, 0.3);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  margin-top: 8px;
+  
+  /* Trạng thái thu nhỏ ban đầu (Collapsed / Zoom-out) */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.92) translateY(-12px);
+  transform-origin: top right;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 999;
 }
 
+/* Trạng thái phóng to mở rộng (Expanded / Zoom-in) */
 .mobile-menu.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
 }
 
 .mobile-menu .nav-link {
-  display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition);
 }
+
+.mobile-menu .nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu .nav-link:hover,
+.mobile-menu .nav-link.active {
+  color: var(--cyan);
+  padding-left: 8px;
+}
+
+/* Floating Bottom Navigation Bar for Mobile */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 12px;
+  left: 16px;
+  right: 16px;
+  background: rgba(11, 74, 83, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 168, 181, 0.3);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  justify-content: space-around;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.mobile-bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-decoration: none;
+  gap: 3px;
+  transition: var(--transition);
+  padding: 4px 8px;
+  border-radius: var(--radius-md);
+}
+
+.mobile-bottom-item i {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-bottom-item.active,
+.mobile-bottom-item:hover {
+  color: var(--cyan);
+}
+
+.mobile-bottom-item.highlight {
+  background: var(--cyan);
+  color: #fff !important;
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  box-shadow: 0 4px 12px rgba(0, 168, 181, 0.4);
+}
+
 
 /* Page Header (for inner pages) */
 .page-banner {

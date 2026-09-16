@@ -8,12 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
     lucide.createIcons();
   }
 
-  // 2. Mobile Menu Toggle
+  // 2. Mobile Menu Toggle & Click Outside to Close
   const mobileToggle = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  const closeMobileMenu = () => {
+    if (mobileMenu && mobileMenu.classList.contains("open")) {
+      mobileMenu.classList.remove("open");
+      const icon = mobileToggle?.querySelector("i");
+      if (icon) {
+        icon.setAttribute("data-lucide", "menu");
+        if (typeof lucide !== "undefined") lucide.createIcons();
+      }
+    }
+  };
+
   if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener("click", () => {
+    mobileToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       mobileMenu.classList.toggle("open");
       const icon = mobileToggle.querySelector("i");
       if (icon) {
@@ -25,17 +37,50 @@ document.addEventListener("DOMContentLoaded", () => {
         if (typeof lucide !== "undefined") lucide.createIcons();
       }
     });
+
+    // Click outside to collapse/zoom-out menu
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
   }
 
-  // 3. Highlight Active Navigation Item based on current path
+  // 3. Highlight Active Navigation Item (Top & Bottom Mobile Nav)
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link, .mobile-bottom-item");
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
+    const href = link.getAttribute("href") || link.getAttribute("data-page");
     if (href === currentPath || (currentPath === "" && href === "index.html")) {
       link.classList.add("active");
     }
   });
+
+  // 4. Scroll-aware Zoom (Thu Phóng) cho Mobile Bottom Nav
+  const mobileBottomNav = document.querySelector(".mobile-bottom-nav");
+  if (mobileBottomNav) {
+    let lastScrollTop = 0;
+    window.addEventListener(
+      "scroll",
+      () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Cuộn xuống: Thu nhỏ & giấu thanh bar để nhường chỗ xem nội dung
+          mobileBottomNav.style.transform = "translateY(80px) scale(0.9)";
+          mobileBottomNav.style.opacity = "0";
+          mobileBottomNav.style.pointerEvents = "none";
+          closeMobileMenu();
+        } else {
+          // Cuộn lên: Phóng to & hiện lại thanh bar
+          mobileBottomNav.style.transform = "translateY(0) scale(1)";
+          mobileBottomNav.style.opacity = "1";
+          mobileBottomNav.style.pointerEvents = "auto";
+        }
+        lastScrollTop = Math.max(0, scrollTop);
+      },
+      { passive: true }
+    );
+  }
 
   // 4. Animated Number Counters
   const counterElements = document.querySelectorAll("[data-counter]");

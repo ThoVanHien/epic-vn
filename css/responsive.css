@@ -33,12 +33,20 @@
 
 /* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 76px;
+  }
+
   .nav-links {
     display: none;
   }
 
   .mobile-toggle {
     display: block;
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
   }
 
   .hero {

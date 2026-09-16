@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dự Án Tiêu Biểu - EPIC VIETNAM</title>
+  <meta name="description" content="Danh mục các công trình cơ điện, trạm biến áp và hệ thống M&E do EPIC VIETNAM thi công tại các KCN Bình Dương." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.277.0/dist/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="EPIC VIETNAM Logo" class="brand-logo" />
+        <div class="brand-name">
+          EPIC VIETNAM
+          <span>Technical Service</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="services.html" class="nav-link">Dịch vụ</a>
+        <a href="projects.html" class="nav-link">Dự án</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:0989584595" class="btn-hotline">
+          <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i>
+          <span>0989 584 595</span>
+        </a>
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Mở Menu">
+          <i data-lucide="menu" style="width: 26px; height: 26px;"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu">
+      <a href="index.html" class="nav-link">Trang chủ</a>
+      <a href="about.html" class="nav-link">Giới thiệu</a>
+      <a href="services.html" class="nav-link">Dịch vụ</a>
+      <a href="projects.html" class="nav-link">Dự án</a>
+      <a href="contact.html" class="nav-link">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1 class="page-title">Dự Án Tiêu Biểu</h1>
+      <p class="page-subtitle">
+        Những công trình chất lượng khẳng định uy tín và năng lực kỹ thuật của EPIC VIETNAM.
+      </p>
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <span>Dự án</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Filter & Grid -->
+  <section class="section section-white">
+    <div class="container">
+      
+      <!-- Filter Bar -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">Tất Cả Dự Án</button>
+        <button class="filter-btn" data-filter="transformer">Trạm Biến Áp</button>
+        <button class="filter-btn" data-filter="factory">Điện Nhà Xưởng M&E</button>
+        <button class="filter-btn" data-filter="elv">Hệ Thống ELV</button>
+        <button class="filter-btn" data-filter="maintenance">Bảo Trì Định Kỳ</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card" data-category="transformer">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN VSIP II</span>
+            <i data-lucide="zap" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Trạm Biến Áp</div>
+            <h3 class="project-name">Trạm Biến Áp Hợp Bộ 2500kVA - Nhà Máy May Precision</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> VSIP II, Bến Cát, Bình Dương</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Thiết kế, thỏa thuận đấu nối và đóng điện trạm Kios 2500kVA 22/0.4kV kết hợp hệ thống tủ RMU Schneider.
+            </p>
+            <div class="project-spec">
+              <span>Công suất: <strong>2500 kVA</strong></span>
+              <span>Bàn giao: <strong>Tháng 08/2024</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="factory">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN Mỹ Phước 3</span>
+            <i data-lucide="factory" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Điện Nhà Xưởng M&E</div>
+            <h3 class="project-name">Tổng Thầu Cơ Điện Nhà Máy Sản Xuất Nhựa Poly Tech</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Mỹ Phước 3, Bến Cát, Bình Dương</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Thi công trọn gói thang máng cáp, tủ động lực MCC, hệ thống chiếu sáng LED 150W và cấp nguồn máy ép phun.
+            </p>
+            <div class="project-spec">
+              <span>Diện tích: <strong>18.000 m²</strong></span>
+              <span>Bàn giao: <strong>Tháng 05/2024</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="transformer">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN Bàu Bàng</span>
+            <i data-lucide="zap" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Trạm Biến Áp</div>
+            <h3 class="project-name">Nâng Cấp Trạm Treo 3x250kVA Lên Trạm Giàn 1600kVA</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> KCN Bàu Bàng, Bình Dương</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Cải tạo nâng công suất không làm gián đoạn kế hoạch sản xuất của nhà máy, nghiệm thu đóng điện an toàn 100%.
+            </p>
+            <div class="project-spec">
+              <span>Quy mô: <strong>1600 kVA</strong></span>
+              <span>Bàn giao: <strong>Tháng 12/2023</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="elv">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN Sóng Thần 3</span>
+            <i data-lucide="shield" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Hệ Thống ELV</div>
+            <h3 class="project-name">Hạ Tầng Camera AI & Mạng LAN Trung Tâm Logistics</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> KCN Sóng Thần 3, Thủ Dầu Một</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Triển khai hơn 120 điểm camera 4K nhận diện biển số container cùng hệ thống cáp quang backbone 10Gbps.
+            </p>
+            <div class="project-spec">
+              <span>Quy mô: <strong>120 Camera AI</strong></span>
+              <span>Bàn giao: <strong>Tháng 03/2024</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="factory">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN Đất Cuốc</span>
+            <i data-lucide="cpu" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Điện Nhà Xưởng M&E</div>
+            <h3 class="project-name">Lắp Đặt Hệ Thống Thanh Cái Busway 2500A Schneider</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> KCN Đất Cuốc, Bắc Tân Uyên</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Hệ thống trục dẫn điện chính cấp nguồn cho toàn bộ dây chuyền sản xuất linh kiện điện tử.
+            </p>
+            <div class="project-spec">
+              <span>Dòng tải: <strong>2500A</strong></span>
+              <span>Bàn giao: <strong>Tháng 10/2023</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="maintenance">
+          <div class="project-thumb">
+            <span class="project-thumb-badge">KCN VSIP I</span>
+            <i data-lucide="wrench" style="width: 48px; height: 48px;"></i>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Bảo Trì Định Kỳ</div>
+            <h3 class="project-name">Bảo Trì Thí Nghiệm Toàn Diện 4 Trạm Biến Áp Tổng 6000kVA</h3>
+            <p class="project-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> VSIP I, Thuận An, Bình Dương</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 14px;">
+              Lọc sấy dầu biến áp, siết lực lại toàn bộ thanh đồng, chụp ảnh nhiệt hồng ngoại phát hiện sớm 3 điểm quá nhiệt.
+            </p>
+            <div class="project-spec">
+              <span>Tổng tải: <strong>6000 kVA</strong></span>
+              <span>Định kỳ: <strong>Hàng năm</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="section section-light" style="text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 12px;">
+        Cần Tư Vấn Thiết Kế Hoặc Nâng Cấp Hệ Thống Cho Nhà Máy?
+      </h2>
+      <p style="color: var(--muted); margin-bottom: 24px;">
+        Đội ngũ kỹ sư chuyên môn của EPIC VIETNAM sẵn sàng hỗ trợ khảo sát và tư vấn phương án kỹ thuật tối ưu chi phí nhất.
+      </p>
+      <a href="contact.html" class="btn btn-primary">
+        <i data-lucide="send" style="width: 16px; height: 16px;"></i> Đặt Lịch Khảo Sát Hiện Trường Miễn Phí
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>EPIC VIETNAM</h4>
+          <p>
+            Nhà thầu chuyên nghiệp trong lĩnh vực cơ điện (M&E), trạm biến áp trung/hạ thế và hệ thống quản lý năng lượng cho các nhà máy tại Bình Dương và Đông Nam Bộ.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Liên Kết Nhanh</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu công ty</a></li>
+            <li><a href="services.html">Dịch vụ kỹ thuật</a></li>
+            <li><a href="projects.html">Dự án tiêu biểu</a></li>
+            <li><a href="contact.html">Liên hệ & Báo giá</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Dịch Vụ</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#transformer">Trạm biến áp</a></li>
+            <li><a href="services.html#distribution">Tủ điện MSB / ATS</a></li>
+            <li><a href="services.html#distribution">Điện nhà xưởng</a></li>
+            <li><a href="services.html#maintenance">Bảo trì thí nghiệm</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Hỗ Trợ Kỹ Thuật</h5>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 12px;">
+            Đội phản ứng khẩn cấp trực 24/7 sẵn sàng có mặt xử lý sự cố điện nhà máy.
+          </p>
+          <a href="tel:0989584595" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Gọi 0989 584 595
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 EPIC VIETNAM Technical Service. All rights reserved.</p>
+        <p>Địa chỉ trụ sở: Thới Hòa, Bến Cát, Bình Dương – MST: 3703511268 – Số ĐKKD: 0101234567 do Sở Kế hoạch & Đầu tư tỉnh Bình Dương cấp ngày 01/01/2020.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

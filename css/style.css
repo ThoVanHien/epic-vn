@@ -185,16 +185,47 @@ ul {
   display: none;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
   cursor: pointer;
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: var(--radius-sm);
   transition: var(--transition);
+  width: 42px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .mobile-toggle:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
+}
+
+/* 3 thanh ngang chuyển động (Animated Hamburger to X) */
+.hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.3s ease;
+  transform-origin: center;
+}
+
+/* Khi bấm mở menu (Active) -> biến hóa thành dấu X */
+.mobile-toggle.active .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--cyan);
+}
+
+.mobile-toggle.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-toggle.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--cyan);
 }
 
 /* Mobile Menu Thu Phóng (Scale & Zoom Transition) */

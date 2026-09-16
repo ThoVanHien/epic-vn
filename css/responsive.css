@@ -42,7 +42,7 @@
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
 
   .mobile-bottom-nav {

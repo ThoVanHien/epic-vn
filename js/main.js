@@ -15,11 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMobileMenu = () => {
     if (mobileMenu && mobileMenu.classList.contains("open")) {
       mobileMenu.classList.remove("open");
-      const icon = mobileToggle?.querySelector("i");
-      if (icon) {
-        icon.setAttribute("data-lucide", "menu");
-        if (typeof lucide !== "undefined") lucide.createIcons();
-      }
+      mobileToggle?.classList.remove("active");
     }
   };
 
@@ -27,15 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileToggle.addEventListener("click", (e) => {
       e.stopPropagation();
       mobileMenu.classList.toggle("open");
-      const icon = mobileToggle.querySelector("i");
-      if (icon) {
-        if (mobileMenu.classList.contains("open")) {
-          icon.setAttribute("data-lucide", "x");
-        } else {
-          icon.setAttribute("data-lucide", "menu");
-        }
-        if (typeof lucide !== "undefined") lucide.createIcons();
-      }
+      mobileToggle.classList.toggle("active");
     });
 
     // Click outside to collapse/zoom-out menu

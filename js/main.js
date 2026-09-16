@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 3. Highlight Active Navigation Item (Top & Bottom Mobile Nav)
+  // 3. Highlight Active Navigation Item (Top Menu)
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-bottom-item");
+  const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
     const href = link.getAttribute("href") || link.getAttribute("data-page");
     if (href === currentPath || (currentPath === "" && href === "index.html")) {
@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop && scrollTop > 100) {
           // Cuộn xuống: Thu nhỏ & giấu thanh bar để nhường chỗ xem nội dung
-          mobileBottomNav.style.transform = "translateY(80px) scale(0.9)";
+          mobileBottomNav.style.transform = "translateX(-50%) translateY(90px) scale(0.85)";
           mobileBottomNav.style.opacity = "0";
           mobileBottomNav.style.pointerEvents = "none";
           closeMobileMenu();
         } else {
           // Cuộn lên: Phóng to & hiện lại thanh bar
-          mobileBottomNav.style.transform = "translateY(0) scale(1)";
+          mobileBottomNav.style.transform = "translateX(-50%) translateY(0) scale(1)";
           mobileBottomNav.style.opacity = "1";
           mobileBottomNav.style.pointerEvents = "auto";
         }

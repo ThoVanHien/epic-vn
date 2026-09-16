@@ -2,36 +2,43 @@
    EPIC VIETNAM Technical Service - Core Stylesheet
    ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary: #0B4A53;
+  --primary: #0b4a53;
   --primary-light: #126370;
   --primary-dark: #07333a;
-  --cyan: #00A8B5;
+  --cyan: #00a8b5;
   --cyan-dark: #008c97;
   --cyan-light: #e6f9fa;
-  --steel: #F8FAFC;
-  --surface: #FFFFFF;
-  --slate: #0F172A;
+  --steel: #f8fafc;
+  --surface: #ffffff;
+  --slate: #0f172a;
   --slate-light: #334155;
-  --muted: #64748B;
-  --border: #E2E8F0;
-  --border-focus: #00A8B5;
-  --accent: #F59E0B;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --border-focus: #00a8b5;
+  --accent: #f59e0b;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(11, 74, 83, 0.1), 0 4px 6px -4px rgba(11, 74, 83, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(11, 74, 83, 0.15), 0 8px 10px -6px rgba(11, 74, 83, 0.1);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg:
+    0 10px 15px -3px rgba(11, 74, 83, 0.1),
+    0 4px 6px -4px rgba(11, 74, 83, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(11, 74, 83, 0.15),
+    0 8px 10px -6px rgba(11, 74, 83, 0.1);
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-full: 9999px;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-main: 'Be Vietnam Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-main: "Be Vietnam Pro", "Inter", system-ui, -apple-system, sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -146,7 +153,7 @@ ul {
 }
 
 .nav-link.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -208,7 +215,10 @@ ul {
   height: 2px;
   background-color: #ffffff;
   border-radius: 2px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease,
+    background-color 0.3s ease;
   transform-origin: center;
 }
 
@@ -242,7 +252,7 @@ ul {
   border: 1px solid rgba(0, 168, 181, 0.3);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
   margin-top: 8px;
-  
+
   /* Trạng thái thu nhỏ ban đầu (Collapsed / Zoom-out) */
   opacity: 0;
   visibility: hidden;
@@ -283,63 +293,114 @@ ul {
   padding-left: 8px;
 }
 
-/* Floating Bottom Navigation Bar for Mobile */
+/* Floating Circular Contact Bar for Mobile */
 .mobile-bottom-nav {
   display: none;
   position: fixed;
-  bottom: 12px;
-  left: 16px;
-  right: 16px;
-  background: rgba(11, 74, 83, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 168, 181, 0.3);
-  border-radius: var(--radius-full);
-  padding: 8px 16px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(1);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   z-index: 1000;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  transition: var(--transition);
+  gap: 20px;
+  pointer-events: none;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s ease;
 }
 
-.mobile-bottom-item {
+.mobile-contact-circle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.72rem;
-  font-weight: 600;
   text-decoration: none;
-  gap: 3px;
-  transition: var(--transition);
-  padding: 4px 8px;
-  border-radius: var(--radius-md);
+  gap: 4px;
+  flex: 0 0 auto;
+  pointer-events: auto;
 }
 
-.mobile-bottom-item i {
-  width: 20px;
-  height: 20px;
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.mobile-bottom-item.active,
-.mobile-bottom-item:hover {
-  color: var(--cyan);
+.circle-icon svg {
+  display: block;
+  flex-shrink: 0;
 }
 
-.mobile-bottom-item.highlight {
-  background: var(--cyan);
-  color: #fff !important;
-  border-radius: var(--radius-full);
-  padding: 6px 14px;
-  box-shadow: 0 4px 12px rgba(0, 168, 181, 0.4);
+.circle-icon:active,
+.circle-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
 }
 
+/* Nút Zalo */
+.circle-icon.btn-zalo {
+  background: linear-gradient(135deg, #0088ff 0%, #0060e5 100%);
+  box-shadow: 0 6px 18px rgba(0, 104, 255, 0.45);
+}
+
+/* Nút Gọi điện */
+@keyframes phonePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.circle-icon.btn-phone {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  animation: phonePulse 2.2s infinite;
+}
+
+/* Nút Messenger */
+.circle-icon.btn-messenger {
+  background: linear-gradient(135deg, #00b2fe 0%, #006aff 50%, #a033ff 100%);
+  box-shadow: 0 6px 18px rgba(0, 106, 255, 0.45);
+}
+
+.circle-label {
+  display: none;
+}
 
 /* Page Header (for inner pages) */
 .page-banner {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
   color: #ffffff;
   padding: 60px 0;
   text-align: center;
@@ -348,10 +409,14 @@ ul {
 }
 
 .page-banner::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(0, 168, 181, 0.2), transparent 70%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 168, 181, 0.2),
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -455,7 +520,11 @@ ul {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 51, 58, 0.75) 0%, rgba(11, 74, 83, 0.92) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(7, 51, 58, 0.75) 0%,
+    rgba(11, 74, 83, 0.92) 100%
+  );
 }
 
 .hero-content {
@@ -530,7 +599,7 @@ ul {
 }
 
 .stat-item:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 20%;
@@ -859,7 +928,11 @@ ul {
 }
 
 .contact-info-card {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   color: #ffffff;
   padding: 36px;
   border-radius: var(--radius-lg);

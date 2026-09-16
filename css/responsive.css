@@ -45,6 +45,10 @@
     display: flex;
   }
 
+  .btn-hotline {
+    display: none;
+  }
+
   .mobile-bottom-nav {
     display: flex;
   }
@@ -139,11 +143,6 @@
 @media (max-width: 480px) {
   .brand-name {
     font-size: 1rem;
-  }
-
-  .btn-hotline {
-    padding: 6px 12px;
-    font-size: 0.8rem;
   }
 
   .hero-title {

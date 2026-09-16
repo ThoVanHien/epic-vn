@@ -70,6 +70,36 @@
     gap: 30px;
   }
 
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-subgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-row {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .service-detail-row > div {
+    order: initial !important;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .stats-strip {
     margin-top: -20px;
     padding: 24px 12px;
@@ -126,6 +156,10 @@
   }
 
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
     grid-template-columns: 1fr;
   }
 

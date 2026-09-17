@@ -36,17 +36,74 @@
 
         <!-- Desktop Nav -->
         <nav class="nav-links">
-          <a href="index.html" class="nav-link">Trang chủ</a>
+          <a href="index.html" class="nav-link active">Trang chủ</a>
           <a href="about.html" class="nav-link">Giới thiệu</a>
           <a href="services.html" class="nav-link">Dịch vụ</a>
-          <a href="projects.html" class="nav-link">Dự án</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link">
+              Sản phẩm
+              <svg
+                class="dropdown-chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="products.html#transformer-panel" class="dropdown-item">
+                <span>Tủ Điện & Trạm Biến Áp</span>
+                <span class="drop-tag">MSB</span>
+              </a>
+              <a href="products.html#switchgear" class="dropdown-item">
+                <span>Khí Cụ Đóng Cắt (ACB/MCCB)</span>
+                <span class="drop-tag">Schneider</span>
+              </a>
+              <a href="products.html#cable-tray" class="dropdown-item">
+                <span>Cáp Điện & Thang Máng Cáp</span>
+                <span class="drop-tag">Cadivi</span>
+              </a>
+              <a href="products.html#automation" class="dropdown-item">
+                <span>Biến Tần, PLC & HMI</span>
+                <span class="drop-tag">Inverter</span>
+              </a>
+              <a href="products.html#automation" class="dropdown-item">
+                <span>Cảm Biến & Đo Lường</span>
+                <span class="drop-tag">Selec</span>
+              </a>
+            </div>
+          </div>
+          <a href="profile.html" class="nav-link">Hồ sơ năng lực</a>
+          <a href="news.html" class="nav-link">Tin tức</a>
+          <a href="careers.html" class="nav-link">Tuyển dụng</a>
           <a href="contact.html" class="nav-link">Liên hệ</a>
         </nav>
 
         <!-- Hotline & Mobile Toggle -->
         <div class="header-actions">
           <a href="tel:0989584595" class="btn-hotline">
-            <i data-lucide="phone-call" style="width: 16px; height: 16px"></i>
+            <svg
+              class="hotline-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              <path d="M15 2a7 7 0 0 1 7 7M15 6a3 3 0 0 1 3 3" />
+            </svg>
             <span>0989 584 595</span>
           </a>
           <button
@@ -63,10 +120,53 @@
 
       <!-- Mobile Nav Menu -->
       <nav id="mobile-menu" class="mobile-menu">
-        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="index.html" class="nav-link active">Trang chủ</a>
         <a href="about.html" class="nav-link">Giới thiệu</a>
         <a href="services.html" class="nav-link">Dịch vụ</a>
-        <a href="projects.html" class="nav-link">Dự án</a>
+        <div class="mobile-nav-accordion">
+          <div class="mobile-accordion-header">
+            <a href="products.html" class="nav-link">Sản phẩm</a>
+            <button
+              type="button"
+              class="mobile-accordion-btn"
+              aria-expanded="false"
+              aria-label="Mở rộng hoặc thu gọn danh mục sản phẩm"
+            >
+              <svg
+                class="mobile-accordion-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-nav-sub">
+            <a href="products.html" class="sub-all-link"
+              >➔ Xem tất cả sản phẩm</a
+            >
+            <a href="products.html#transformer-panel"
+              >• Tủ Điện & Trạm Biến Áp</a
+            >
+            <a href="products.html#switchgear">• Khí Cụ Đóng Cắt (ACB/MCCB)</a>
+            <a href="products.html#cable-tray">• Cáp Điện & Thang Máng Cáp</a>
+            <a href="products.html#automation"
+              >• Biến Tần, PLC & Màn Hình HMI</a
+            >
+            <a href="products.html#automation"
+              >• Cảm Biến & Đo Lường Kỹ Thuật</a
+            >
+          </div>
+        </div>
+        <a href="profile.html" class="nav-link">Hồ sơ năng lực</a>
+        <a href="news.html" class="nav-link">Tin tức</a>
+        <a href="careers.html" class="nav-link">Tuyển dụng</a>
         <a href="contact.html" class="nav-link">Liên hệ</a>
       </nav>
     </header>
@@ -297,8 +397,8 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px">
-          <a href="projects.html" class="btn btn-secondary">
-            Xem Tất Cả Dự Án
+          <a href="contact.html" class="btn btn-secondary">
+            Liên Hệ Tư Vấn Dự Án
             <i data-lucide="arrow-right" style="width: 16px; height: 16px"></i>
           </a>
         </div>
@@ -339,8 +439,198 @@
       </div>
     </section>
 
+    <!-- Featured Products Showcase (Sản Phẩm Tiêu Biểu) -->
+    <section class="section section-white" id="products">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Thiết Bị Chính Hãng</span>
+          <h2 class="section-title">Sản Phẩm & Thiết Bị Cơ Điện Phân Phối</h2>
+          <p class="section-subtitle">
+            Cung ứng thiết bị trạm biến áp, khí cụ đóng cắt và phụ kiện M&E chất
+            lượng cao với giá tham khảo minh bạch, hỗ trợ bóc tách khối lượng
+            (BOQ) và báo giá dự án nhanh.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Item 1: Tủ điện MSB -->
+          <div class="product-card" data-product-cat="transformer-panel">
+            <div class="product-badge-top">
+              <span class="badge-brand">EPIC PRO</span>
+              <span class="badge-status">Sẵn hàng</span>
+            </div>
+            <div class="product-thumb">
+              <div class="product-img-placeholder">
+                <i data-lucide="image" class="placeholder-icon"></i>
+                <span class="placeholder-text">Hình ảnh thiết bị</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category-label">Trạm Biến Áp & Tủ Điện</span>
+              <h3 class="product-title">
+                Tủ Điện Phân Phối Tổng MSB (Main Switchboard)
+              </h3>
+              <div class="product-model">
+                <i data-lucide="tag" style="width: 14px; height: 14px"></i>
+                Model: EPIC-MSB-3200A
+              </div>
+              <ul class="product-specs-list">
+                <li>
+                  <i data-lucide="check"></i> Định mức: 630A - 6300A (Form 2B -
+                  4B)
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Tiêu chuẩn quốc tế IEC 61439-1/2
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Vỏ tôn mạ kẽm sơn tĩnh điện RAL
+                  7035
+                </li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-label">Giá:</span>
+                <span class="price-value contact">Liên Hệ</span>
+              </div>
+              <div class="product-actions">
+<a
+                  href="https://zalo.me/0989584595?text=Xin%20chào%20EPIC%20VIETNAM%2C%20tôi%20muốn%20nhận%20báo%20giá%20Tủ%20Điện%20Tổng%20MSB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-zalo-quote"
+                >
+                  <img src="assets/icons/zalo.svg" class="zalo-button-icon" width="24" height="24" alt="" aria-hidden="true" />
+                  Báo giá Zalo
+                </a>
+                <button type="button" class="btn-view-spec">
+                  <i data-lucide="eye" style="width: 15px; height: 15px"></i>
+                  Xem thông số
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Máy cắt ACB Schneider -->
+          <div class="product-card" data-product-cat="switchgear">
+            <div class="product-badge-top">
+              <span class="badge-brand">SCHNEIDER</span>
+              <span class="badge-status">Sẵn hàng</span>
+            </div>
+            <div class="product-thumb">
+              <div class="product-img-placeholder">
+                <i data-lucide="image" class="placeholder-icon"></i>
+                <span class="placeholder-text">Hình ảnh thiết bị</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category-label">Khí Cụ Đóng Cắt</span>
+              <h3 class="product-title">
+                Máy Cắt Không Khí ACB MasterPact MTZ1 1600A 3P
+              </h3>
+              <div class="product-model">
+                <i data-lucide="tag" style="width: 14px; height: 14px"></i>
+                Model: LV847113 (Fixed / Drawout)
+              </div>
+              <ul class="product-specs-list">
+                <li>
+                  <i data-lucide="check"></i> Dòng định mức: 1600A - Dòng cắt:
+                  50kA
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Bộ bảo vệ kỹ thuật số Micrologic
+                  2.0X
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Xuất xứ: Pháp (Đầy đủ CO/CQ)
+                </li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-label">Giá:</span>
+                <span class="price-value contact">Liên Hệ</span>
+              </div>
+              <div class="product-actions">
+<a
+                  href="https://zalo.me/0989584595?text=Xin%20chào%20EPIC%20VIETNAM%2C%20tôi%20muốn%20nhận%20báo%20giá%20ACB%20Schneider%20MasterPact%201600A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-zalo-quote"
+                >
+                  <img src="assets/icons/zalo.svg" class="zalo-button-icon" width="24" height="24" alt="" aria-hidden="true" />
+                  Báo giá Zalo
+                </a>
+                <button type="button" class="btn-view-spec">
+                  <i data-lucide="eye" style="width: 15px; height: 15px"></i>
+                  Xem thông số
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Aptomat Khối MCCB LS -->
+          <div class="product-card" data-product-cat="switchgear">
+            <div class="product-badge-top">
+              <span class="badge-brand">LS ELECTRIC</span>
+              <span class="badge-status">Sẵn hàng</span>
+            </div>
+            <div class="product-thumb">
+              <div class="product-img-placeholder">
+                <i data-lucide="image" class="placeholder-icon"></i>
+                <span class="placeholder-text">Hình ảnh thiết bị</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category-label">Khí Cụ Đóng Cắt</span>
+              <h3 class="product-title">
+                Aptomat Khối MCCB LS Susol TS400N 3P 400A 65kA
+              </h3>
+              <div class="product-model">
+                <i data-lucide="tag" style="width: 14px; height: 14px"></i>
+                Model: TS400N-FTU-400-3P
+              </div>
+              <ul class="product-specs-list">
+                <li>
+                  <i data-lucide="check"></i> Số cực: 3 Pha - Dòng tải: 400A
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Khả năng cắt ngắn mạch: Icu = 65kA
+                </li>
+                <li>
+                  <i data-lucide="check"></i> Xuất xứ: Hàn Quốc chính hãng
+                </li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-label">Giá:</span>
+                <span class="price-value contact">Liên Hệ</span>
+              </div>
+              <div class="product-actions">
+<a
+                  href="https://zalo.me/0989584595?text=Xin%20chào%20EPIC%20VIETNAM%2C%20tôi%20muốn%20nhận%20báo%20giá%20MCCB%20LS%20TS400N"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-zalo-quote"
+                >
+                  <img src="assets/icons/zalo.svg" class="zalo-button-icon" width="24" height="24" alt="" aria-hidden="true" />
+                  Báo giá Zalo
+                </a>
+                <button type="button" class="btn-view-spec">
+                  <i data-lucide="eye" style="width: 15px; height: 15px"></i>
+                  Xem thông số
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px">
+          <a href="products.html" class="btn btn-secondary">
+            Xem Toàn Bộ Danh Mục Sản Phẩm & Thiết Bị
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Quick Contact Strip -->
-    <section class="section section-white" id="contact">
+    <section class="section section-light" id="contact">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-card">
@@ -523,7 +813,10 @@
               <li><a href="index.html">Trang chủ</a></li>
               <li><a href="about.html">Giới thiệu công ty</a></li>
               <li><a href="services.html">Dịch vụ kỹ thuật</a></li>
-              <li><a href="projects.html">Dự án tiêu biểu</a></li>
+              <li><a href="products.html">Sản phẩm thiết bị</a></li>
+              <li><a href="profile.html">Hồ sơ năng lực</a></li>
+              <li><a href="news.html">Tin tức & Kỹ thuật</a></li>
+              <li><a href="careers.html">Tuyển dụng</a></li>
               <li><a href="contact.html">Liên hệ & Báo giá</a></li>
             </ul>
           </div>
@@ -677,6 +970,113 @@
         <span class="circle-label">Messenger</span>
       </a>
     </nav>
+
+    <!-- Product Inquiry Modal -->
+    <div id="product-modal-overlay" class="product-modal-overlay">
+      <div class="product-modal">
+        <button
+          id="product-modal-close"
+          class="product-modal-close"
+          aria-label="Đóng"
+        >
+          <i data-lucide="x" style="width: 20px; height: 20px"></i>
+        </button>
+        <div class="product-modal-content">
+          <div class="modal-img-wrap">
+            <div class="product-img-placeholder">
+              <i data-lucide="image" class="placeholder-icon"></i>
+              <span class="placeholder-text">Khung hình ảnh thiết bị</span>
+            </div>
+          </div>
+          <div class="modal-details">
+            <span
+              style="
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: var(--cyan);
+                text-transform: uppercase;
+              "
+            >
+              Thông Số Kỹ Thuật & Báo Giá
+            </span>
+            <h3 id="modal-product-title">Tên Sản Phẩm</h3>
+            <div id="modal-product-model" class="modal-model">
+              Model: Đang cập nhật
+            </div>
+
+            <div class="modal-price-box">
+              <span
+                style="
+                  font-size: 0.85rem;
+                  color: var(--muted);
+                  font-weight: 600;
+                "
+                >Giá tham khảo:</span
+              >
+              <span
+                id="modal-product-price"
+                style="
+                  font-size: 1.3rem;
+                  font-weight: 800;
+                  color: var(--primary);
+                "
+                >Liên Hệ</span
+              >
+            </div>
+
+            <table class="modal-specs-table">
+              <tbody>
+                <tr>
+                  <td>Tình trạng kho</td>
+                  <td>
+                    <span style="color: #10b981; font-weight: 700"
+                      >● Có sẵn tại kho Bình Dương</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chứng nhận</td>
+                  <td>Đầy đủ CO, CQ và chứng chỉ thí nghiệm xuất xưởng</td>
+                </tr>
+                <tr>
+                  <td>Bảo hành</td>
+                  <td>12 - 24 tháng theo tiêu chuẩn nhà sản xuất</td>
+                </tr>
+                <tr>
+                  <td>Hỗ trợ kỹ thuật</td>
+                  <td>Khảo sát vị trí lắp đặt & hướng dẫn đấu nối miễn phí</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="modal-actions-box">
+<a
+                id="modal-zalo-link"
+                href="https://zalo.me/0989584595"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                style="justify-content: center; background: #0068ff"
+              >
+                <img src="assets/icons/zalo.svg" class="zalo-button-icon" width="24" height="24" alt="" aria-hidden="true" />
+                Nhận Báo Giá Ưu Đãi Qua Zalo
+              </a>
+              <a
+                href="tel:0989584595"
+                class="btn btn-outline"
+                style="justify-content: center"
+              >
+                <i
+                  data-lucide="phone-call"
+                  style="width: 18px; height: 18px"
+                ></i>
+                Gọi Trực Tiếp Kỹ Sư: 0989 584 595
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>

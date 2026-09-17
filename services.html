@@ -32,14 +32,71 @@
         <nav class="nav-links">
           <a href="index.html" class="nav-link">Trang chủ</a>
           <a href="about.html" class="nav-link">Giới thiệu</a>
-          <a href="services.html" class="nav-link">Dịch vụ</a>
-          <a href="projects.html" class="nav-link">Dự án</a>
+          <a href="services.html" class="nav-link active">Dịch vụ</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link">
+              Sản phẩm
+              <svg
+                class="dropdown-chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="products.html#transformer-panel" class="dropdown-item">
+                <span>Tủ Điện & Trạm Biến Áp</span>
+                <span class="drop-tag">MSB</span>
+              </a>
+              <a href="products.html#switchgear" class="dropdown-item">
+                <span>Khí Cụ Đóng Cắt (ACB/MCCB)</span>
+                <span class="drop-tag">Schneider</span>
+              </a>
+              <a href="products.html#cable-tray" class="dropdown-item">
+                <span>Cáp Điện & Thang Máng Cáp</span>
+                <span class="drop-tag">Cadivi</span>
+              </a>
+              <a href="products.html#automation" class="dropdown-item">
+                <span>Biến Tần, PLC & HMI</span>
+                <span class="drop-tag">Inverter</span>
+              </a>
+              <a href="products.html#automation" class="dropdown-item">
+                <span>Cảm Biến & Đo Lường</span>
+                <span class="drop-tag">Selec</span>
+              </a>
+            </div>
+          </div>
+          <a href="profile.html" class="nav-link">Hồ sơ năng lực</a>
+          <a href="news.html" class="nav-link">Tin tức</a>
+          <a href="careers.html" class="nav-link">Tuyển dụng</a>
           <a href="contact.html" class="nav-link">Liên hệ</a>
         </nav>
 
         <div class="header-actions">
           <a href="tel:0989584595" class="btn-hotline">
-            <i data-lucide="phone-call" style="width: 16px; height: 16px"></i>
+            <svg
+              class="hotline-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              <path d="M15 2a7 7 0 0 1 7 7M15 6a3 3 0 0 1 3 3" />
+            </svg>
             <span>0989 584 595</span>
           </a>
           <button
@@ -57,8 +114,51 @@
       <nav id="mobile-menu" class="mobile-menu">
         <a href="index.html" class="nav-link">Trang chủ</a>
         <a href="about.html" class="nav-link">Giới thiệu</a>
-        <a href="services.html" class="nav-link">Dịch vụ</a>
-        <a href="projects.html" class="nav-link">Dự án</a>
+        <a href="services.html" class="nav-link active">Dịch vụ</a>
+        <div class="mobile-nav-accordion">
+          <div class="mobile-accordion-header">
+            <a href="products.html" class="nav-link">Sản phẩm</a>
+            <button
+              type="button"
+              class="mobile-accordion-btn"
+              aria-expanded="false"
+              aria-label="Mở rộng hoặc thu gọn danh mục sản phẩm"
+            >
+              <svg
+                class="mobile-accordion-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-nav-sub">
+            <a href="products.html" class="sub-all-link"
+              >➔ Xem tất cả sản phẩm</a
+            >
+            <a href="products.html#transformer-panel"
+              >• Tủ Điện & Trạm Biến Áp</a
+            >
+            <a href="products.html#switchgear">• Khí Cụ Đóng Cắt (ACB/MCCB)</a>
+            <a href="products.html#cable-tray">• Cáp Điện & Thang Máng Cáp</a>
+            <a href="products.html#automation"
+              >• Biến Tần, PLC & Màn Hình HMI</a
+            >
+            <a href="products.html#automation"
+              >• Cảm Biến & Đo Lường Kỹ Thuật</a
+            >
+          </div>
+        </div>
+        <a href="profile.html" class="nav-link">Hồ sơ năng lực</a>
+        <a href="news.html" class="nav-link">Tin tức</a>
+        <a href="careers.html" class="nav-link">Tuyển dụng</a>
         <a href="contact.html" class="nav-link">Liên hệ</a>
       </nav>
     </header>
@@ -672,7 +772,10 @@
               <li><a href="index.html">Trang chủ</a></li>
               <li><a href="about.html">Giới thiệu công ty</a></li>
               <li><a href="services.html">Dịch vụ kỹ thuật</a></li>
-              <li><a href="projects.html">Dự án tiêu biểu</a></li>
+              <li><a href="products.html">Sản phẩm thiết bị</a></li>
+              <li><a href="profile.html">Hồ sơ năng lực</a></li>
+              <li><a href="news.html">Tin tức & Kỹ thuật</a></li>
+              <li><a href="careers.html">Tuyển dụng</a></li>
               <li><a href="contact.html">Liên hệ & Báo giá</a></li>
             </ul>
           </div>

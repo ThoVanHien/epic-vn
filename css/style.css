@@ -2106,3 +2106,27 @@ ul {
   gap: 14px;
   flex-wrap: wrap;
 }
+
+/* Images and feedback for the CMS catalog. */
+.product-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.modal-img-wrap .product-photo {
+  height: auto;
+  max-height: 420px;
+}
+.products-message {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+}
+.product-description {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.product-title, .modal-specs-table td {
+  overflow-wrap: anywhere;
+}

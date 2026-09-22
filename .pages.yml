@@ -1,0 +1,70 @@
+media:
+  input: images/products
+  output: images/products
+  extensions: [jpg, jpeg, png, webp, gif, avif]
+  rename: safe
+content:
+  - name: catalog
+    label: Sản phẩm
+    type: file
+    path: data/products.json
+    format: json
+    fields:
+      - name: products
+        label: Danh sách sản phẩm
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tên sản phẩm
+            type: string
+            required: true
+          - name: model
+            label: Mã sản phẩm / Model
+            type: string
+          - name: category
+            label: Danh mục
+            type: select
+            required: true
+            options:
+              values:
+                - name: transformer-panel
+                  label: Trạm Biến Áp & Tủ Điện
+                - name: switchgear
+                  label: Khí Cụ Đóng Cắt
+                - name: cable-tray
+                  label: Cáp Điện & Thang Máng Cáp
+                - name: automation
+                  label: Đo Lường & Tự Động Hoá
+          - name: brand
+            label: Thương hiệu
+            type: string
+          - name: status
+            label: Tình trạng hàng
+            type: string
+            default: Sẵn hàng
+          - name: price
+            label: Giá hiển thị (ví dụ 1.500.000 VNĐ hoặc Liên hệ)
+            type: string
+            default: Liên hệ báo giá
+          - name: image
+            label: Ảnh sản phẩm
+            type: image
+          - name: specs
+            label: Thông số kỹ thuật (mỗi mục một thông số)
+            type: string
+            list: true
+          - name: description
+            label: Mô tả chi tiết
+            type: text
+          - name: visible
+            label: Hiển thị trên website
+            type: boolean
+            default: true
+          - name: featured
+            label: Nổi bật trên trang chủ
+            type: boolean
+            default: false

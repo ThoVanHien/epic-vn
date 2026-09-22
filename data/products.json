@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "title": "Tủ Điện Phân Phối Tổng MSB (Main Switchboard)",
+      "model": "EPIC-MSB-3200A",
+      "category": "transformer-panel",
+      "brand": "EPIC PRO",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Định mức: 630A - 6300A (Form 2B - 4B)",
+        "Tiêu chuẩn quốc tế IEC 61439-1/2",
+        "Vỏ tôn mạ kẽm sơn tĩnh điện RAL 7035"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": true
+    },
+    {
+      "title": "Máy Biến Áp Dầu 3 Pha 1000kVA (22/0.4kV)",
+      "model": "THIBIDI-1000KVA-22",
+      "category": "transformer-panel",
+      "brand": "THIBIDI",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Công suất định mức: 1000 kVA",
+        "Điện áp: 22kV / 0.4kV (Dây đồng 100%)",
+        "Đạt QĐ 62/QĐ-EVN & TCVN 8525"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    },
+    {
+      "title": "Máy Cắt Không Khí ACB MasterPact MTZ1 1600A 3P",
+      "model": "LV847113 (Fixed / Drawout)",
+      "category": "switchgear",
+      "brand": "SCHNEIDER",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Dòng định mức: 1600A - Dòng cắt: 50kA",
+        "Bộ bảo vệ kỹ thuật số Micrologic 2.0X",
+        "Xuất xứ: Pháp (Schneider Electric)"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": true
+    },
+    {
+      "title": "Aptomat Khối MCCB LS Susol TS400N 3P 400A 65kA",
+      "model": "TS400N-FTU-400-3P",
+      "category": "switchgear",
+      "brand": "LS ELECTRIC",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Số cực: 3 Pha - Dòng tải: 400A",
+        "Khả năng cắt ngắn mạch: Icu = 65kA",
+        "Xuất xứ: Hàn Quốc (Đầy đủ CO/CQ)"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": true
+    },
+    {
+      "title": "Cáp Điện Lực Hạ Thế Cadivi CXV 4x185 mm² (0.6/1kV)",
+      "model": "CADIVI-CXV-4x185",
+      "category": "cable-tray",
+      "brand": "CADIVI",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Ruột đồng nguyên chất 99.99%",
+        "Cách điện XLPE, vỏ bọc PVC chống cháy",
+        "Tiêu chuẩn: TCVN 5935-1 / IEC 60502-1"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    },
+    {
+      "title": "Thang Máng Cáp Sơn Tĩnh Điện / Mạ Kẽm Nhúng Nóng",
+      "model": "TCT-300x100 / 400x100",
+      "category": "cable-tray",
+      "brand": "EPIC TRAY",
+      "status": "Gia công theo y/c",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Kích thước: Rộng 100 - 800mm, Cao 50 - 200mm",
+        "Độ dày tôn: 1.2mm, 1.5mm, 2.0mm",
+        "Kèm đầy đủ phụ kiện nối, co T, cút góc L"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    },
+    {
+      "title": "Tủ Tụ Bù Hạ Thế Tự Động 300kVAR (Bù Cos Phi > 0.95)",
+      "model": "EPIC-CAP-300KVAR",
+      "category": "transformer-panel",
+      "brand": "EPIC PRO",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Dung lượng bù: 100kVAR - 600kVAR (6-12 cấp)",
+        "Bộ điều khiển tự động Mikro / Selec / Epcos",
+        "Tránh bị phạt tiền công suất phản kháng EVN"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    },
+    {
+      "title": "Biến Tần Schneider Altivar Process ATV630 37kW (50HP)",
+      "model": "ATV630D37N4 (3 Pha 380-480V)",
+      "category": "automation",
+      "brand": "SCHNEIDER",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Công suất: 37 kW / 50 HP (Tải nặng & nhẹ)",
+        "Tích hợp truyền thông Modbus TCP/IP, Ethernet",
+        "Tối ưu tiết kiệm điện cho bơm & quạt công nghiệp"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    },
+    {
+      "title": "Đồng Hồ Đo Đa Năng Selec MFM383A (V, A, Hz, PF, kW, kVA)",
+      "model": "MFM383A-C-CU (RS485 Modbus)",
+      "category": "automation",
+      "brand": "SELEC",
+      "status": "Sẵn hàng",
+      "price": "Liên Hệ",
+      "image": "",
+      "specs": [
+        "Màn hình LCD 3 dòng hiển thị cực nét",
+        "Đo thông số sóng hài THD điện áp & dòng điện",
+        "Cổng giao tiếp RS485 kết nối hệ thống Scada/EMS"
+      ],
+      "description": "",
+      "visible": true,
+      "featured": false
+    }
+  ]
+}

@@ -2,18 +2,16 @@
   "products": [
     {
       "title": "Tủ Điện Phân Phối Tổng MSB (Main Switchboard)",
-      "model": "EPIC-MSB-3200A",
+      "model": "EPIC-MSB-3200AB",
       "category": "transformer-panel",
       "brand": "EPIC PRO",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Định mức: 630A - 6300A (Form 2B - 4B)",
         "Tiêu chuẩn quốc tế IEC 61439-1/2",
         "Vỏ tôn mạ kẽm sơn tĩnh điện RAL 7035"
       ],
-      "description": "",
       "visible": true,
       "featured": true
     },
@@ -24,13 +22,11 @@
       "brand": "THIBIDI",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Công suất định mức: 1000 kVA",
         "Điện áp: 22kV / 0.4kV (Dây đồng 100%)",
         "Đạt QĐ 62/QĐ-EVN & TCVN 8525"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     },
@@ -41,13 +37,11 @@
       "brand": "SCHNEIDER",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Dòng định mức: 1600A - Dòng cắt: 50kA",
         "Bộ bảo vệ kỹ thuật số Micrologic 2.0X",
         "Xuất xứ: Pháp (Schneider Electric)"
       ],
-      "description": "",
       "visible": true,
       "featured": true
     },
@@ -58,13 +52,11 @@
       "brand": "LS ELECTRIC",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Số cực: 3 Pha - Dòng tải: 400A",
         "Khả năng cắt ngắn mạch: Icu = 65kA",
         "Xuất xứ: Hàn Quốc (Đầy đủ CO/CQ)"
       ],
-      "description": "",
       "visible": true,
       "featured": true
     },
@@ -75,13 +67,11 @@
       "brand": "CADIVI",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Ruột đồng nguyên chất 99.99%",
         "Cách điện XLPE, vỏ bọc PVC chống cháy",
         "Tiêu chuẩn: TCVN 5935-1 / IEC 60502-1"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     },
@@ -92,13 +82,11 @@
       "brand": "EPIC TRAY",
       "status": "Gia công theo y/c",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Kích thước: Rộng 100 - 800mm, Cao 50 - 200mm",
         "Độ dày tôn: 1.2mm, 1.5mm, 2.0mm",
         "Kèm đầy đủ phụ kiện nối, co T, cút góc L"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     },
@@ -109,13 +97,11 @@
       "brand": "EPIC PRO",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Dung lượng bù: 100kVAR - 600kVAR (6-12 cấp)",
         "Bộ điều khiển tự động Mikro / Selec / Epcos",
         "Tránh bị phạt tiền công suất phản kháng EVN"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     },
@@ -126,13 +112,11 @@
       "brand": "SCHNEIDER",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Công suất: 37 kW / 50 HP (Tải nặng & nhẹ)",
         "Tích hợp truyền thông Modbus TCP/IP, Ethernet",
         "Tối ưu tiết kiệm điện cho bơm & quạt công nghiệp"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     },
@@ -143,13 +127,11 @@
       "brand": "SELEC",
       "status": "Sẵn hàng",
       "price": "Liên Hệ",
-      "image": "",
       "specs": [
         "Màn hình LCD 3 dòng hiển thị cực nét",
         "Đo thông số sóng hài THD điện áp & dòng điện",
         "Cổng giao tiếp RS485 kết nối hệ thống Scada/EMS"
       ],
-      "description": "",
       "visible": true,
       "featured": false
     }

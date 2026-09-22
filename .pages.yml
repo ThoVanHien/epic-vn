@@ -5,7 +5,7 @@ media:
   rename: safe
 content:
   - name: catalog
-    label: Sản phẩm a
+    label: Sản phẩm
     type: file
     path: data/products.json
     format: json
@@ -19,20 +19,20 @@ content:
             summary: "{title}"
         fields:
           - name: title
-            label: Tên sản phẩm ABC
+            label: Tên sản phẩm
             type: string
             required: true
           - name: model
-            label: Mã sản phẩm / Model das asd asd
+            label: Mã sản phẩm / Model
             type: string
-          - name: categoryad a
-            label: Danh dasdasdas
+          - name: category
+            label: Danh mục
             type: select
             required: true
             options:
               values:
                 - name: transformer-panel
-                  label: Trạm Biến Áp & Tdasdaủ Đsdasdiện ABC
+                  label: Trạm Biến Áp & Tủ Điện
                 - name: switchgear
                   label: Khí Cụ Đóng Cắt
                 - name: cable-tray

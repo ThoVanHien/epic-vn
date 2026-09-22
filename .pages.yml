@@ -32,7 +32,7 @@ content:
             options:
               values:
                 - name: transformer-panel
-                  label: Trạm Biến Áp & Tủ Điện
+                  label: Trạm Biến Áp & Tủ Điện ABC
                 - name: switchgear
                   label: Khí Cụ Đóng Cắt
                 - name: cable-tray

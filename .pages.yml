@@ -5,7 +5,7 @@ media:
   rename: safe
 content:
   - name: catalog
-    label: Sản phẩm
+    label: Sản phẩm a
     type: file
     path: data/products.json
     format: json

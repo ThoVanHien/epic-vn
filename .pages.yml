@@ -19,7 +19,7 @@ content:
             summary: "{title}"
         fields:
           - name: title
-            label: Tên sản phẩm
+            label: Tên sản phẩm ABC
             type: string
             required: true
           - name: model

@@ -23,16 +23,16 @@ content:
             type: string
             required: true
           - name: model
-            label: Mã sản phẩm / Model
+            label: Mã sản phẩm / Model das asd asd
             type: string
-          - name: category
-            label: Danh mục
+          - name: categoryad a
+            label: Danh dasdasdas
             type: select
             required: true
             options:
               values:
                 - name: transformer-panel
-                  label: Trạm Biến Áp & Tủ Điện ABC
+                  label: Trạm Biến Áp & Tdasdaủ Đsdasdiện ABC
                 - name: switchgear
                   label: Khí Cụ Đóng Cắt
                 - name: cable-tray

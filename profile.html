@@ -1,35 +1,25 @@
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ Sơ Năng Lực - EPIC VIETNAM Technical Service</title>
-    <meta
-      name="description"
-      content="Hồ sơ năng lực công ty EPIC VIETNAM: Pháp lý doanh nghiệp, chứng chỉ hành nghề cơ điện, danh mục thiết bị thi công đo kiểm và kinh nghiệm dự án tại Bình Dương."
-    />
+    <meta name="description" content="Hồ sơ năng lực công ty EPIC VIETNAM: Pháp lý doanh nghiệp, chứng chỉ hành nghề cơ điện, danh mục thiết bị thi công đo kiểm và kinh nghiệm dự án tại Bình Dương.">
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Lucide Icons -->
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.277.0/dist/lucide.min.js"></script>
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="css/cms.css">
+</head>
+  <body data-page="profile">
     <!-- Header Navigation -->
     <header class="header">
       <div class="container header-container">
         <a href="index.html" class="brand">
-          <img
-            src="images/logo.png"
-            alt="EPIC VIETNAM Logo"
-            class="brand-logo"
-          />
-          <div class="brand-name">
-            EPIC VIETNAM
-            <span>Technical Service</span>
-          </div>
+          <img src="images/logo.png" alt="EPIC VIETNAM Logo" class="brand-logo" data-site-src="logo">
+          <div class="brand-name"><span data-site="company" class="brand-company">EPIC VIETNAM</span><span data-site="tagline">Technical Service</span></div>
         </a>
 
         <!-- Desktop Nav -->
@@ -40,23 +30,13 @@
           <div class="nav-item-dropdown">
             <a href="products.html" class="nav-link">
               Sản phẩm
-              <svg
-                class="dropdown-chevron"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
               </svg>
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" data-category-menu="desktop">
               <a href="products.html#transformer-panel" class="dropdown-item">
-                <span>Tủ Điện & Trạm Biến Áp</span>
+                <span>Tủ Điện &amp; Trạm Biến Áp</span>
                 <span class="drop-tag">MSB</span>
               </a>
               <a href="products.html#switchgear" class="dropdown-item">
@@ -64,15 +44,15 @@
                 <span class="drop-tag">Schneider</span>
               </a>
               <a href="products.html#cable-tray" class="dropdown-item">
-                <span>Cáp Điện & Thang Máng Cáp</span>
+                <span>Cáp Điện &amp; Thang Máng Cáp</span>
                 <span class="drop-tag">Cadivi</span>
               </a>
               <a href="products.html#automation" class="dropdown-item">
-                <span>Biến Tần, PLC & HMI</span>
+                <span>Biến Tần, PLC &amp; HMI</span>
                 <span class="drop-tag">Inverter</span>
               </a>
               <a href="products.html#automation" class="dropdown-item">
-                <span>Cảm Biến & Đo Lường</span>
+                <span>Cảm Biến &amp; Đo Lường</span>
                 <span class="drop-tag">Selec</span>
               </a>
             </div>
@@ -85,30 +65,14 @@
 
         <!-- Hotline & Mobile Toggle -->
         <div class="header-actions">
-          <a href="tel:0989584595" class="btn-hotline">
-            <svg
-              class="hotline-icon"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              <path d="M15 2a7 7 0 0 1 7 7M15 6a3 3 0 0 1 3 3" />
+          <a href="tel:0989584595" class="btn-hotline" data-contact="phone">
+            <svg class="hotline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              <path d="M15 2a7 7 0 0 1 7 7M15 6a3 3 0 0 1 3 3"></path>
             </svg>
             <span>0989 584 595</span>
           </a>
-          <button
-            id="mobile-menu-btn"
-            class="mobile-toggle"
-            aria-label="Mở Menu"
-          >
+          <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Mở Menu">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
@@ -124,42 +88,19 @@
         <div class="mobile-nav-accordion">
           <div class="mobile-accordion-header">
             <a href="products.html" class="nav-link">Sản phẩm</a>
-            <button
-              type="button"
-              class="mobile-accordion-btn"
-              aria-expanded="false"
-              aria-label="Mở rộng hoặc thu gọn danh mục sản phẩm"
-            >
-              <svg
-                class="mobile-accordion-chevron"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
+            <button type="button" class="mobile-accordion-btn" aria-expanded="false" aria-label="Mở rộng hoặc thu gọn danh mục sản phẩm">
+              <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
               </svg>
             </button>
           </div>
-          <div class="mobile-nav-sub">
-            <a href="products.html" class="sub-all-link"
-              >➔ Xem tất cả sản phẩm</a
-            >
-            <a href="products.html#transformer-panel"
-              >• Tủ Điện & Trạm Biến Áp</a
-            >
+          <div class="mobile-nav-sub" data-category-menu="mobile">
+            <a href="products.html" class="sub-all-link">➔ Xem tất cả sản phẩm</a>
+            <a href="products.html#transformer-panel">• Tủ Điện &amp; Trạm Biến Áp</a>
             <a href="products.html#switchgear">• Khí Cụ Đóng Cắt (ACB/MCCB)</a>
-            <a href="products.html#cable-tray">• Cáp Điện & Thang Máng Cáp</a>
-            <a href="products.html#automation"
-              >• Biến Tần, PLC & Màn Hình HMI</a
-            >
-            <a href="products.html#automation"
-              >• Cảm Biến & Đo Lường Kỹ Thuật</a
-            >
+            <a href="products.html#cable-tray">• Cáp Điện &amp; Thang Máng Cáp</a>
+            <a href="products.html#automation">• Biến Tần, PLC &amp; Màn Hình HMI</a>
+            <a href="products.html#automation">• Cảm Biến &amp; Đo Lường Kỹ Thuật</a>
           </div>
         </div>
         <a href="profile.html" class="nav-link active">Hồ sơ năng lực</a>
@@ -172,8 +113,8 @@
     <!-- Page Banner -->
     <section class="page-banner">
       <div class="container">
-        <h1 class="page-title">Hồ Sơ Năng Lực Doanh Nghiệp</h1>
-        <p class="page-subtitle">
+        <h1 class="page-title" data-cms="section_1.text_1">Hồ Sơ Năng Lực Doanh Nghiệp</h1>
+        <p class="page-subtitle" data-cms="section_1.text_2">
           Tổng quan năng lực pháp lý, đội ngũ kỹ sư chuyên trách, hệ thống máy
           móc đo kiểm hiện đại và bề dày kinh nghiệm thực thi các dự án cơ điện
           công nghiệp trọng điểm.
@@ -195,29 +136,24 @@
               <i data-lucide="file-check-2"></i>
             </div>
             <div>
-              <span class="profile-download-badge">
+              <span class="profile-download-badge" data-cms="section_2.text_1">
                 Tài Liệu Chính Thức 2026
               </span>
-              <h2 class="profile-download-title">
-                EPIC VIETNAM - Company Profile & Technical Capability
+              <h2 class="profile-download-title" data-cms="section_2.text_2">
+                EPIC VIETNAM - Company Profile &amp; Technical Capability
               </h2>
-              <p class="profile-download-desc">
+              <p class="profile-download-desc" data-cms="section_2.text_3">
                 Bao gồm giấy phép kinh doanh, chứng chỉ năng lực hoạt động xây
                 dựng, danh mục máy móc và hợp đồng dự án tiêu biểu.
               </p>
             </div>
           </div>
           <div class="profile-download-actions">
-            <a
-              href="https://zalo.me/0989584595?text=Xin%20chào%20EPIC%20VIETNAM%2C%20vui%20lòng%20gửi%20cho%20tôi%20bản%20PDF%20Hồ%20sơ%20năng%20lực%20đầy%20đủ"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
-            >
+            <a href="https://zalo.me/0989584595?text=Xin%20chào%20EPIC%20VIETNAM%2C%20vui%20lòng%20gửi%20cho%20tôi%20bản%20PDF%20Hồ%20sơ%20năng%20lực%20đầy%20đủ" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-contact="zalo" data-profile-download="">
               <i data-lucide="download" style="width: 18px; height: 18px"></i>
               Tải Bản PDF Đầy Đủ
             </a>
-            <a href="tel:0989584595" class="btn btn-outline">
+            <a href="tel:0989584595" class="btn btn-outline" data-contact="phone">
               <i data-lucide="mail" style="width: 18px; height: 18px"></i>
               Yêu Cầu Gửi Bản Cứng
             </a>
@@ -226,52 +162,49 @@
 
         <!-- Section 1: Legal & Company Info -->
         <div class="section-header">
-          <span class="section-tag">Pháp lý & Tổ chức</span>
-          <h2 class="section-title">
-            Thông Tin Pháp Lý & Năng Lực Doanh Nghiệp
+          <span class="section-tag" data-cms="section_2.text_4">Pháp lý &amp; Tổ chức</span>
+          <h2 class="section-title" data-cms="section_2.text_5">
+            Thông Tin Pháp Lý &amp; Năng Lực Doanh Nghiệp
           </h2>
         </div>
 
         <div class="profile-legal-grid">
           <div class="profile-card">
-            <h4 class="profile-card-title">
-              <i
-                data-lucide="building-2"
-                style="width: 20px; height: 20px; color: var(--cyan)"
-              ></i>
+            <h4 class="profile-card-title" data-cms="section_2.text_6">
+              <i data-lucide="building-2" style="width: 20px; height: 20px; color: var(--cyan)"></i>
               Thông Tin Doanh Nghiệp
             </h4>
             <div class="table-responsive">
               <table class="profile-table">
                 <tbody>
                   <tr>
-                    <td class="profile-table-label">Tên tiếng Việt:</td>
-                    <td class="profile-table-value" style="font-weight: 700">
+                    <td class="profile-table-label" data-cms="section_2.text_7">Tên tiếng Việt:</td>
+                    <td class="profile-table-value" style="font-weight: 700" data-cms="section_2.text_8">
                       CÔNG TY TNHH DỊCH VỤ KỸ THUẬT EPIC VIỆT NAM
                     </td>
                   </tr>
                   <tr>
-                    <td class="profile-table-label">Tên quốc tế:</td>
-                    <td class="profile-table-value" style="font-weight: 600">
+                    <td class="profile-table-label" data-cms="section_2.text_9">Tên quốc tế:</td>
+                    <td class="profile-table-value" style="font-weight: 600" data-cms="section_2.text_10">
                       EPIC VIETNAM TECHNICAL SERVICE CO., LTD
                     </td>
                   </tr>
                   <tr>
-                    <td class="profile-table-label">Lĩnh vực cốt lõi:</td>
-                    <td class="profile-table-value">
-                      Thi công trạm biến áp, tủ điện phân phối, cơ điện M&E nhà
+                    <td class="profile-table-label" data-cms="section_2.text_11">Lĩnh vực cốt lõi:</td>
+                    <td class="profile-table-value" data-cms="section_2.text_12">
+                      Thi công trạm biến áp, tủ điện phân phối, cơ điện M&amp;E nhà
                       máy
                     </td>
                   </tr>
                   <tr>
-                    <td class="profile-table-label">Trụ sở kỹ thuật:</td>
-                    <td class="profile-table-value">
+                    <td class="profile-table-label" data-cms="section_2.text_13">Trụ sở kỹ thuật:</td>
+                    <td class="profile-table-value" data-cms="section_2.text_14">
                       Thới Hòa, Thị xã Bến Cát, Tỉnh Bình Dương
                     </td>
                   </tr>
                   <tr>
-                    <td class="profile-table-label">Đường dây nóng:</td>
-                    <td class="profile-table-value highlight-hotline">
+                    <td class="profile-table-label" data-cms="section_2.text_15">Đường dây nóng:</td>
+                    <td class="profile-table-value highlight-hotline" data-cms="section_2.text_16">
                       0989 584 595 (Kỹ sư trực 24/7)
                     </td>
                   </tr>
@@ -281,31 +214,28 @@
           </div>
 
           <div class="profile-card">
-            <h4 class="profile-card-title">
-              <i
-                data-lucide="award"
-                style="width: 20px; height: 20px; color: var(--cyan)"
-              ></i>
-              Chứng Chỉ & Tiêu Chuẩn Áp Dụng
+            <h4 class="profile-card-title" data-cms="section_2.text_17">
+              <i data-lucide="award" style="width: 20px; height: 20px; color: var(--cyan)"></i>
+              Chứng Chỉ &amp; Tiêu Chuẩn Áp Dụng
             </h4>
             <div class="profile-cert-list">
               <div class="profile-cert-item">
                 <i data-lucide="shield-check" class="profile-cert-icon"></i>
-                <div>
+                <div data-cms="section_2.text_18">
                   <strong>Chứng chỉ năng lực hoạt động xây dựng:</strong> Thi
                   công lắp đặt thiết bị cơ điện công trình công nghiệp Hạng 1.
                 </div>
               </div>
               <div class="profile-cert-item">
                 <i data-lucide="shield-check" class="profile-cert-icon"></i>
-                <div>
+                <div data-cms="section_2.text_19">
                   <strong>Chứng chỉ an toàn điện cao - trung thế:</strong> Đội
                   ngũ kỹ sư đạt thẻ an toàn bậc 5/5 theo quy định EVN.
                 </div>
               </div>
               <div class="profile-cert-item">
                 <i data-lucide="shield-check" class="profile-cert-icon"></i>
-                <div>
+                <div data-cms="section_2.text_20">
                   <strong>Tiêu chuẩn kỹ thuật nghiệm thu:</strong> TCVN 7447,
                   IEC 60364, IEC 61439-1/2 và QCVN 06:2022/BXD về PCCC.
                 </div>
@@ -316,11 +246,11 @@
 
         <!-- Section 2: Equipment & Machinery -->
         <div class="section-header">
-          <span class="section-tag">Cơ sở vật chất</span>
-          <h2 class="section-title">
-            Danh Mục Thiết Bị Đo Kiểm & Thi Công Hiện Đại
+          <span class="section-tag" data-cms="section_2.text_21">Cơ sở vật chất</span>
+          <h2 class="section-title" data-cms="section_2.text_22">
+            Danh Mục Thiết Bị Đo Kiểm &amp; Thi Công Hiện Đại
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-cms="section_2.text_23">
             EPIC VIETNAM đầu tư 100% trang thiết bị đo kiểm chuyên dụng được
             hiệu chuẩn định kỳ tại các trung tâm Quatest, đảm bảo tính chính xác
             tuyệt đối.
@@ -332,10 +262,10 @@
             <div class="profile-equip-icon">
               <i data-lucide="activity" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">
+            <h4 class="profile-equip-title" data-cms="section_2.text_24">
               Camera Nhiệt Hồng Ngoại Fluke Ti401
             </h4>
-            <p class="profile-equip-desc">
+            <p class="profile-equip-desc" data-cms="section_2.text_25">
               Kiểm tra điểm phát nhiệt quá tải tại các đầu cosse, thanh cái
               busbar, máy biến áp không cần ngắt điện.
             </p>
@@ -345,10 +275,10 @@
             <div class="profile-equip-icon">
               <i data-lucide="gauge" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">
+            <h4 class="profile-equip-title" data-cms="section_2.text_26">
               Máy Đo Phân Tích Chất Lượng Điện
             </h4>
-            <p class="profile-equip-desc">
+            <p class="profile-equip-desc" data-cms="section_2.text_27">
               Thiết bị Fluke 435-II đo sóng hài THD, sụt áp, công suất phản
               kháng, hệ số Cos phi để lập phương án bù.
             </p>
@@ -358,10 +288,10 @@
             <div class="profile-equip-icon">
               <i data-lucide="zap" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">
-              Hợp Bộ Thử Cao Áp & Đo Cách Điện
+            <h4 class="profile-equip-title" data-cms="section_2.text_28">
+              Hợp Bộ Thử Cao Áp &amp; Đo Cách Điện
             </h4>
-            <p class="profile-equip-desc">
+            <p class="profile-equip-desc" data-cms="section_2.text_29">
               Đo điện trở cách điện Megger 10kV, thử nghiệm cao áp AC/DC cáp
               ngầm trung thế trước khi đóng điện.
             </p>
@@ -371,10 +301,10 @@
             <div class="profile-equip-icon">
               <i data-lucide="anchor" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">
+            <h4 class="profile-equip-title" data-cms="section_2.text_30">
               Máy Đo Điện Trở Tiếp Địa Kyoritsu
             </h4>
-            <p class="profile-equip-desc">
+            <p class="profile-equip-desc" data-cms="section_2.text_31">
               Kiểm tra bãi tiếp địa chống sét và hệ thống tiếp địa an toàn trạm
               biến áp đạt chuẩn &lt; 4Ω và &lt; 10Ω.
             </p>
@@ -384,10 +314,10 @@
             <div class="profile-equip-icon">
               <i data-lucide="wrench" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">
-              Hệ Thống Ép Cos Thủy Lực & Uốn Đồng
+            <h4 class="profile-equip-title" data-cms="section_2.text_32">
+              Hệ Thống Ép Cos Thủy Lực &amp; Uốn Đồng
             </h4>
-            <p class="profile-equip-desc">
+            <p class="profile-equip-desc" data-cms="section_2.text_33">
               Kìm ép cos pin thủy lực 16 - 630mm², máy gia công thanh cái đồng
               tự động đạt độ dẫn điện tối đa.
             </p>
@@ -397,8 +327,8 @@
             <div class="profile-equip-icon">
               <i data-lucide="truck" style="width: 24px; height: 24px"></i>
             </div>
-            <h4 class="profile-equip-title">Đội Xe Cơ Động Kỹ Thuật 24/7</h4>
-            <p class="profile-equip-desc">
+            <h4 class="profile-equip-title" data-cms="section_2.text_34">Đội Xe Cơ Động Kỹ Thuật 24/7</h4>
+            <p class="profile-equip-desc" data-cms="section_2.text_35">
               Xe chuyên dụng chở đầy đủ vật tư thay thế khẩn cấp, có mặt tại
               hiện trường nhà máy trong vòng 30 phút.
             </p>
@@ -407,16 +337,16 @@
 
         <!-- Section 3: Safety & Quality Commitment -->
         <div class="profile-commitment-card">
-          <h3 class="profile-commitment-title">
-            Cam Kết Năng Lực & An Toàn Vận Hành Tuyệt Đối
+          <h3 class="profile-commitment-title" data-cms="section_2.text_36">
+            Cam Kết Năng Lực &amp; An Toàn Vận Hành Tuyệt Đối
           </h3>
-          <p class="profile-commitment-desc">
+          <p class="profile-commitment-desc" data-cms="section_2.text_37">
             Toàn bộ công trình do EPIC VIETNAM thiết kế và thi công đều được bảo
             hiểm trách nhiệm công trình, bảo hành kỹ thuật 24 tháng và bảo trì
             định kỳ miễn phí trong năm đầu tiên.
           </p>
           <div class="profile-commitment-actions">
-            <a href="contact.html" class="btn btn-primary">
+            <a href="contact.html" class="btn btn-primary" data-cms="section_2.text_38" data-cms-href="section_2.link_39">
               <i data-lucide="calendar" style="width: 18px; height: 18px"></i>
               Đặt Lịch Khảo Sát Hiện Trường
             </a>
@@ -429,162 +359,96 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <div>
-            <div class="footer-brand">
-              <img
-                src="images/logo.png"
-                alt="Logo"
-                class="brand-logo"
-                style="background: white; border-radius: 4px; padding: 2px"
-              />
-              <span class="footer-brand-title">EPIC VIETNAM</span>
-            </div>
-            <p class="footer-desc">
-              Nhà thầu kỹ thuật cơ điện M&E uy tín, chuyên nghiệp hàng đầu tại
-              Bình Dương. Đồng hành giải quyết mọi bài toán năng lượng và vận
-              hành công nghiệp an toàn, liên tục.
+          <div class="footer-brand">
+            <h4 data-site="company">EPIC VIETNAM</h4>
+            <p data-site="footer_description">
+              Nhà thầu chuyên nghiệp trong lĩnh vực cơ điện (M&amp;E), trạm biến áp
+              trung/hạ thế và hệ thống quản lý năng lượng cho các nhà máy tại
+              Bình Dương và Đông Nam Bộ.
             </p>
           </div>
 
           <div>
-            <h4 class="footer-heading">Dịch Vụ Kỹ Thuật</h4>
+            <h5 class="footer-heading">Liên Kết Nhanh</h5>
             <ul class="footer-links">
-              <li>
-                <a href="services.html#transformer">Trạm Biến Áp & Tủ Điện</a>
-              </li>
-              <li>
-                <a href="services.html#me-system">Hệ Thống Điện Động Lực M&E</a>
-              </li>
-              <li>
-                <a href="services.html#maintenance"
-                  >Bảo Trì Định Kỳ Nhà Xưởng</a
-                >
-              </li>
-              <li>
-                <a href="services.html#lighting">Chiếu Sáng & Năng Lượng</a>
-              </li>
-              <li><a href="products.html">Phân Phối Thiết Bị Đóng Cắt</a></li>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="about.html">Giới thiệu công ty</a></li>
+              <li><a href="services.html">Dịch vụ kỹ thuật</a></li>
+              <li><a href="products.html">Sản phẩm thiết bị</a></li>
+              <li><a href="profile.html">Hồ sơ năng lực</a></li>
+              <li><a href="news.html">Tin tức &amp; Kỹ thuật</a></li>
+              <li><a href="careers.html">Tuyển dụng</a></li>
+              <li><a href="contact.html">Liên hệ &amp; Báo giá</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-heading">Về Doanh Nghiệp</h4>
+            <h5 class="footer-heading">Dịch Vụ</h5>
             <ul class="footer-links">
-              <li><a href="about.html">Về Chúng Tôi</a></li>
-              <li><a href="profile.html">Hồ Sơ Năng Lực</a></li>
-              <li><a href="products.html">Sản Phẩm & Thiết Bị</a></li>
-              <li><a href="contact.html">Liên Hệ Khảo Sát</a></li>
+              <li><a href="services.html#transformer">Trạm biến áp</a></li>
+              <li>
+                <a href="services.html#distribution">Tủ điện MSB / ATS</a>
+              </li>
+              <li><a href="services.html#distribution">Điện nhà xưởng</a></li>
+              <li>
+                <a href="services.html#maintenance">Bảo trì thí nghiệm</a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-heading">Thông Tin Liên Hệ</h4>
-            <div class="footer-contact-item">
-              <i data-lucide="map-pin" style="width: 20px; height: 20px"></i>
-              <span>Tân Uyên, Bình Dương, Việt Nam</span>
-            </div>
-            <div class="footer-contact-item">
-              <i data-lucide="phone" style="width: 18px; height: 18px"></i>
-              <span>Hotline: 0989 584 595</span>
-            </div>
-            <div class="footer-contact-item">
-              <i data-lucide="mail" style="width: 18px; height: 18px"></i>
-              <span>epicvietnam.tech@gmail.com</span>
-            </div>
+            <h5 class="footer-heading">Hỗ Trợ Kỹ Thuật</h5>
+            <p style="
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+              ">
+              Đội phản ứng khẩn cấp trực 24/7 sẵn sàng có mặt xử lý sự cố điện
+              nhà máy.
+            </p>
+            <a href="tel:0989584595" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.88rem" data-contact="phone">
+              <i data-lucide="phone" style="width: 14px; height: 14px"></i> Gọi
+              0989 584 595
+            </a>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 EPIC VIETNAM Technical Service. All rights reserved.</p>
+          <p data-site="copyright">© 2026 EPIC VIETNAM Technical Service. All rights reserved.</p>
+          <p><span data-site="address"></span> · MST: <span data-site="tax_id"></span></p>
         </div>
       </div>
     </footer>
 
     <!-- Mobile Bottom Navigation -->
     <nav class="mobile-bottom-nav" aria-label="Liên hệ nhanh">
-      <a
-        href="https://zalo.me/0989584595"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mobile-contact-circle"
-        title="Chat Zalo"
-      >
+      <a href="https://zalo.me/0989584595" target="_blank" rel="noopener noreferrer" class="mobile-contact-circle" title="Chat Zalo" data-contact="zalo">
         <div class="circle-icon btn-zalo">
           <svg width="24" height="24" viewBox="0 0 50 50" fill="none">
-            <path
-              d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.14 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z"
-              fill="#ffffff"
-            />
-            <path
-              d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z"
-              fill="#0068FF"
-            />
-            <path
-              d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z"
-              fill="#0068FF"
-            />
-            <path
-              d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z"
-              fill="#0068FF"
-            />
-            <path
-              d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z"
-              fill="#0068FF"
-            />
-            <path
-              d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z"
-              fill="#0068FF"
-            />
+            <path d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.14 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="#ffffff"></path>
+            <path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"></path>
+            <path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"></path>
+            <path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"></path>
+            <path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"></path>
+            <path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"></path>
           </svg>
         </div>
         <span class="circle-label">Zalo</span>
       </a>
 
-      <a
-        href="tel:0989584595"
-        class="mobile-contact-circle"
-        title="Gọi điện ngay"
-      >
+      <a href="tel:0989584595" class="mobile-contact-circle" title="Gọi điện ngay" data-contact="phone">
         <div class="circle-icon btn-phone">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#ffffff"
-            stroke-width="2.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-            ></path>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
         </div>
         <span class="circle-label">Gọi điện</span>
       </a>
 
-      <a
-        href="https://m.me/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mobile-contact-circle"
-        title="Nhắn tin Messenger"
-      >
+      <a href="https://m.me/" target="_blank" rel="noopener noreferrer" class="mobile-contact-circle" title="Nhắn tin Messenger" data-contact="messenger">
         <div class="circle-icon btn-messenger">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M12 2C6.477 2 2 6.145 2 11.258c0 2.909 1.455 5.518 3.738 7.215V22l3.418-1.876c.91.252 1.874.39 2.844.39 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.066 12.447l-2.73-2.91-5.326 2.91 5.86-6.22 2.793 2.91 5.263-2.91-5.86 6.22z"
-              fill="#ffffff"
-            />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.145 2 11.258c0 2.909 1.455 5.518 3.738 7.215V22l3.418-1.876c.91.252 1.874.39 2.844.39 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.066 12.447l-2.73-2.91-5.326 2.91 5.86-6.22 2.793 2.91 5.263-2.91-5.86 6.22z" fill="#ffffff"></path>
           </svg>
         </div>
         <span class="circle-label">Messenger</span>
@@ -592,6 +456,7 @@
     </nav>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-  </body>
-</html>
+    <script src="js/site.js"></script><script src="js/main.js"></script>
+
+
+</body></html>

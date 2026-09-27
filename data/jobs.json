@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "Kỹ Sư Trưởng Thi Công Trạm Biến Áp & Tủ Điện MSB",
+      "location": "Toàn thời gian • Bình Dương",
+      "requirements": "Yêu cầu: Tốt nghiệp ĐH chuyên ngành Điện, từ 3 năm kinh nghiệm giám sát trạm biến áp và hệ thống trung - hạ thế.",
+      "salary": "Mức lương: 18.000.000 - 28.000.000 VNĐ",
+      "visible": true
+    },
+    {
+      "title": "Giám Sát Cơ Điện M&E Hệ Thống Nhà Xưởng",
+      "location": "Toàn thời gian • Bình Dương",
+      "requirements": "Yêu cầu: Có kinh nghiệm thi công máng cáp, cáp điện lực động lực, hệ thống chiếu sáng và tủ điện nhà máy.",
+      "salary": "Mức lương: 14.000.000 - 22.000.000 VNĐ",
+      "visible": true
+    },
+    {
+      "title": "Thợ Điện Công Nghiệp & Đấu Nối Tủ Bảng Điện",
+      "location": "Toàn thời gian • Bình Dương",
+      "requirements": "Yêu cầu: Trung cấp/Cao đẳng nghề điện, biết đọc bản vẽ sơ đồ nguyên lý 1 sợi, sức khỏe tốt, trung thực, kỷ luật.",
+      "salary": "Mức lương: 10.000.000 - 16.000.000 VNĐ",
+      "visible": true
+    }
+  ]
+}

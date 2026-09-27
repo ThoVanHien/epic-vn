@@ -1,0 +1,130 @@
+{
+  "seo": {
+    "title": "EPIC VIETNAM - Dịch Vụ Kỹ Thuật Cơ Điện & Trạm Biến Áp Công Nghiệp",
+    "description": "Chuyên tư vấn, thiết kế, thi công trạm biến áp, phân phối điện và hệ thống cơ điện M&E cho các nhà máy tại KCN Bình Dương."
+  },
+  "section_3": {
+    "text_1": "Năng lực cốt lõi",
+    "text_2": "Dịch Vụ Kỹ Thuật Chuyên Sâu",
+    "text_3": "Giải pháp toàn diện từ khảo sát, thiết kế bản vẽ kỹ thuật, thẩm duyệt an toàn PCCC, thi công lắp đặt cho tới bảo trì bảo dưỡng nhà máy."
+  },
+  "section_4": {
+    "text_1": "Dự án thực tế",
+    "text_2": "Công Trình Tiêu Biểu",
+    "text_3": "Các công trình thi công cơ điện và trạm biến áp đã bàn giao đạt chuẩn an toàn cao tại các KCN trọng điểm.",
+    "text_22": "Liên Hệ Tư Vấn Dự Án",
+    "link_23": "contact.html"
+  },
+  "section_5": {
+    "text_1": "Cam kết dịch vụ",
+    "text_2": "Tại Sao Khách Hàng Chọn EPIC VIETNAM?"
+  },
+  "section_6": {
+    "text_1": "Thiết Bị Chính Hãng",
+    "text_2": "Sản Phẩm & Thiết Bị Cơ Điện Phân Phối",
+    "text_3": "Cung ứng thiết bị trạm biến áp, khí cụ đóng cắt và phụ kiện M&E chất lượng cao với giá tham khảo minh bạch, hỗ trợ bóc tách khối lượng (BOQ) và báo giá dự án nhanh.",
+    "text_6": "Xem Toàn Bộ Danh Mục Sản Phẩm & Thiết Bị",
+    "link_7": "products.html"
+  },
+  "section_7": {
+    "text_1": "Cùng lên phương án",
+    "text_2": "Bạn đã có bản vẽ hoặc danh sách thiết bị?",
+    "text_3": "Trao đổi trực tiếp với đội ngũ kỹ thuật để làm rõ yêu cầu và phương án triển khai phù hợp.",
+    "text_4": "Nhập yêu cầu tư vấn",
+    "text_5": "Thông Tin Doanh Nghiệp",
+    "text_6": "Trụ sở chính",
+    "text_7": "Hotline 24/7",
+    "text_8": "Email Kỹ thuật",
+    "text_9": "Mã số thuế"
+  },
+  "banner_image": "",
+  "form_hints": {
+    "hint_1": "Tên của bạn",
+    "hint_2": "09xx xxx xxx",
+    "hint_3": "Sản phẩm, công suất, địa điểm hoặc thời gian dự kiến…"
+  },
+  "stats": [
+    {
+      "title": "Giờ Thi Công An Toàn",
+      "value": "5.000+"
+    },
+    {
+      "title": "Dự Án Đã Bàn Giao",
+      "value": "250+"
+    },
+    {
+      "title": "Hỗ Trợ Kỹ Thuật 24/7",
+      "value": "24/7"
+    },
+    {
+      "title": "Kỹ Sư & Chuyên Gia M&E",
+      "value": "120+"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Trạm Biến Áp 2500kVA - Nhà Máy Dệt May Precision",
+      "category": "Trạm Biến Áp",
+      "location": "VSIP II, Bến Cát, Bình Dương",
+      "badge": "KCN VSIP II",
+      "scale": "Quy mô: 2500 kVA",
+      "year": "Năm: 2024",
+      "image": "",
+      "visible": true
+    },
+    {
+      "title": "Cơ Điện Nhà Xưởng 15.000m² - Công Ty TNHH Poly Tech",
+      "category": "Hệ Thống M&E Toàn Diện",
+      "location": "Mỹ Phước 3, Bến Cát, Bình Dương",
+      "badge": "KCN Mỹ Phước 3",
+      "scale": "Diện tích: 15.000 m²",
+      "year": "Năm: 2024",
+      "image": "",
+      "visible": true
+    },
+    {
+      "title": "Nâng Cấp Hệ Thống Phân Phối Tủ MSB & Hệ Thống Tụ Bù",
+      "category": "Tủ Điện & Busway",
+      "location": "KCN Bàu Bàng, Bình Dương",
+      "badge": "KCN Bàu Bàng",
+      "scale": "Công suất: 3200A",
+      "year": "Năm: 2023",
+      "image": "",
+      "visible": true
+    }
+  ],
+  "features": [
+    {
+      "title": "Kỹ Sư Chứng Chỉ Chuyên Môn",
+      "description": "Đội ngũ kỹ sư cơ điện giàu kinh nghiệm thực chiến từ các tập đoàn công nghiệp, có chứng chỉ hành nghề giám sát và thi công loại 1.",
+      "visible": true
+    },
+    {
+      "title": "Chuẩn An Toàn Khắt Khe",
+      "description": "Tuân thủ nghiêm ngặt quy trình an toàn điện quốc gia (TCVN) và tiêu chuẩn an toàn lao động quốc tế (OSHA, IEC).",
+      "visible": true
+    },
+    {
+      "title": "Ứng Cứu Sự Cố Trong 30 Phút",
+      "description": "Cơ động xử lý sự cố lưới điện và máy biến áp 24/7 cho toàn bộ các KCN tại khu vực Bình Dương, giảm tối đa tổn thất sản xuất.",
+      "visible": true
+    }
+  ],
+  "hero": {
+    "badge": "Đối Tác Cơ Điện Uy Tín Hàng Đầu",
+    "title": "Lắp Đặt Điện Công Nghiệp, Trạm Biến Áp & Hệ Thống M&E Nhà Xưởng",
+    "description": "Đồng hành cùng hàng trăm doanh nghiệp FDI và nội địa tại các khu công nghiệp Bình Dương với giải pháp kỹ thuật an toàn, chuẩn xác và bền bỉ.",
+    "primary_label": "Nhận tư vấn & báo giá",
+    "secondary_label": "Hồ Sơ Năng Lực Công Ty",
+    "secondary_url": "profile.html"
+  },
+  "enquiry": {
+    "eyebrow": "BẮT ĐẦU TỪ NHU CẦU CỦA BẠN",
+    "title": "Nhận tư vấn kỹ thuật",
+    "description": "Cho chúng tôi biết bạn cần hỗ trợ gì. Chỉ cần tên và số điện thoại để bắt đầu.",
+    "service_label": "Bạn cần hỗ trợ gì?",
+    "submit_label": "Soạn yêu cầu qua email",
+    "help": "Mở ứng dụng email với nội dung đã điền. Bạn kiểm tra và bấm gửi trong ứng dụng email.",
+    "direct_label": "Cần trao đổi ngay?"
+  }
+}

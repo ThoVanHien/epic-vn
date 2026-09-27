@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const mapButton = document.createElement("a");
     mapButton.href =
-      "https://www.google.com/maps/dir/?api=1&destination=Th%E1%BB%9Bi%20H%C3%B2a%2C%20B%E1%BA%BFn%20C%C3%A1t%2C%20B%C3%ACnh%20D%C6%B0%C6%A1ng%2C%20Vi%E1%BB%87t%20Nam";
+      `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(window.EpicSite?.address || "Thới Hòa, Bến Cát, Bình Dương")}`;
     mapButton.target = "_blank";
     mapButton.rel = "noopener noreferrer";
     mapButton.className = "mobile-contact-circle";
@@ -177,28 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       });
-    });
-  }
-
-  // 6. Contact Form Submission Handler
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>Đang gửi thông tin...</span>`;
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        alert(
-          "Cảm ơn Quý khách! Yêu cầu khảo sát kỹ thuật đã được gửi đến ban kỹ sư EPIC VIETNAM. Chúng tôi sẽ phản hồi trong vòng 30 phút.",
-        );
-        contactForm.reset();
-      }, 1000);
     });
   }
 

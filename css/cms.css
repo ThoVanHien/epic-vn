@@ -1,0 +1,108 @@
+/* Product cards: quiet metadata, readable specifications, aligned actions. */
+.product-card { border-color: #dde7e9; border-radius: 16px; box-shadow: 0 3px 14px #103e4506; }
+.product-card:hover { transform: none; box-shadow: 0 10px 28px #103e4510; }
+.product-thumb { height: 216px; padding: 18px; background: #f7fafb; border-bottom: 1px solid #edf2f3; }
+.product-info { padding: 24px; gap: 0; }
+.product-category-label { font-size: .68rem; letter-spacing: .06em; line-height: 1.6; min-height: 2.2em; }
+.product-title { line-height: 1.5; font-size: 1.03rem; min-height: 3em; margin: 4px 0 16px; }
+.product-specs-list .product-model { margin: 0; font-weight: 400; }
+.product-specs-list { background: transparent; border-radius: 0; padding: 0; margin: 0 0 22px; gap: 0; flex: 0 0 auto; }
+.product-specs-list li { display: grid; grid-template-columns: 5px minmax(0,1fr); align-items: start; gap: 10px; padding: 9px 0; font-size: .79rem; line-height: 1.65; color: #5b6b77; overflow-wrap: anywhere; }
+.product-specs-list li + li { border-top: 1px solid #eff3f4; }
+.spec-dot { width: 4px; height: 4px; border-radius: 50%; background: #5b979e; margin-top: 9px; }
+.product-pricing { margin-top: auto; padding-top: 16px; border-top-style: solid; }
+.product-actions { gap: 8px; }
+.btn-zalo-quote, .btn-view-spec { border-radius: 8px; min-height: 42px; }
+.product-description { line-height: 1.8; }
+
+/* Home: a short enquiry form next to the introduction. */
+.brand-name .brand-company { font-size: inherit; color: white; font-weight: 700; letter-spacing: inherit; }
+body[data-page="index"] .hero { padding: 64px 0 84px; background: #093b43; }
+.home-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: clamp(28px,5vw,76px); max-width: 1240px; text-align: left; }
+.home-hero-copy { min-width: 0; }
+.home-hero-copy .hero-badge { font-size: .66rem; color: #91e2de; letter-spacing: .06em; padding: 8px 12px; }
+.home-hero-copy .hero-title { font-size: clamp(1.9rem,3.2vw,2.8rem); font-weight: 700; line-height: 1.27; }
+.home-hero-copy .hero-desc { font-size: .99rem; line-height: 1.85; color: #c3d8db; margin-bottom: 28px; }
+.home-hero-copy .hero-actions { justify-content: flex-start; gap: 12px; }
+.home-hero-copy .hero-actions .btn { font-size: .79rem; }
+.enquiry-card { background: white; color: var(--slate); border: 1px solid #ffffff50; border-radius: 18px; padding: 28px; box-shadow: 0 20px 60px #021a2630; scroll-margin-top: 110px; min-width: 0; }
+.enquiry-eyebrow { color: var(--cyan-dark); font-size: .6rem; font-weight: 800; letter-spacing: .1em; }
+.enquiry-card h2 { color: #173d44; font-size: 1.45rem; line-height: 1.4; margin: 8px 0; }
+.enquiry-card > p { font-size: .79rem; color: var(--muted); margin-bottom: 22px; line-height: 1.7; }
+.enquiry-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.enquiry-form .form-group { margin-bottom: 14px; min-width: 0; }
+.enquiry-form label { display: block; font-size: .75rem; font-weight: 600; margin-bottom: 6px; }
+.enquiry-form input, .enquiry-form select, .enquiry-form textarea { width: 100%; min-width: 0; background: #fbfcfd; color: #263f46; border: 1px solid #dbe4e7; border-radius: 7px; padding: 11px 12px; font: inherit; font-size: .8rem; transition: border-color .2s; }
+.enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus { outline: 3px solid #00a8b51c; border-color: var(--cyan-dark); }
+.enquiry-form textarea { resize: vertical; min-height: 74px; }
+.enquiry-form > .btn { width: 100%; justify-content: center; padding: 12px; font-size: .84rem; background: #087a80; }
+.enquiry-form .btn svg { width: 18px; height: 18px; }
+.optional { color: #839198; font-weight: 400; }
+.enquiry-help { color: #677c84; font-size: .7rem; line-height: 1.6; margin: 10px 0 0; }
+.enquiry-direct { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid #e9eff1; font-size: .73rem; }
+.enquiry-direct span { color: #7a8a92; }
+.enquiry-direct a { color: #087a80; font-weight: 700; }
+.form-status { background: #eef8f7; color: #244e52; font-size: .8rem; line-height: 1.7; padding: 12px; margin-top: 12px; border-radius: 8px; }
+.form-status[hidden] { display: none; }
+.copy-enquiry { background: none; border: 0; text-decoration: underline; font: inherit; color: var(--primary); cursor: pointer; }
+.form-status textarea { width: 100%; min-height: 160px; }
+#contact .contact-card h2 { font-size: 1.6rem; margin: 12px 0; }
+#contact .contact-card > p { color: var(--muted); margin-bottom: 24px; line-height: 1.8; }
+#contact .contact-card > .btn { margin: 0 8px 10px 0; }
+
+/* Content managed through Pages CMS. */
+.cms-service { scroll-margin-top: 110px; }
+.cms-service h2 { font-size: 1.8rem; line-height: 1.4; margin-bottom: 16px; }
+.cms-service p, .cms-service li { color: var(--slate-light); line-height: 1.85; }
+.cms-service ul { margin: 20px 0 28px; padding-left: 20px; }
+.cms-service li { padding: 5px 0; }
+.cms-service-media { background: #f3f7f8; border-radius: 16px; padding: 24px; text-align: center; }
+.cms-service-media > img { width: 100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 10px; }
+.cms-service-media h3 { color: var(--primary); font-size: 1.1rem; margin: 16px 0 8px; }
+.cms-image-placeholder { min-height: 165px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; color: #709097; text-align: center; font-size: .8rem; }
+.cms-image-placeholder svg { width: 38px; height: 38px; stroke-width: 1.3; }
+.cms-news-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: white; display: flex; flex-direction: column; }
+.cms-news-image { height: 190px; background: #f3f7f8; }
+.cms-news-image img { width: 100%; height: 100%; object-fit: cover; }
+.cms-news-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.cms-news-body h2 { font-size: 1.1rem; line-height: 1.6; margin: 8px 0 12px; }
+.cms-news-body > p { font-size: .87rem; line-height: 1.8; color: var(--muted); flex: 1; }
+.cms-news-body time { display: block; font-size: .75rem; color: var(--muted); margin: 18px 0 10px; }
+.cms-news-body summary { cursor: pointer; font-size: .85rem; font-weight: 700; color: var(--primary); padding: 12px 0; border-top: 1px solid var(--border); }
+.cms-article-body p { line-height: 1.8; font-size: .9rem; margin-bottom: 12px; white-space: pre-line; overflow-wrap: anywhere; }
+.cms-job h3 { font-size: 1.2rem; margin: 10px 0; }
+.cms-job p { color: var(--muted); margin-bottom: 14px; white-space: pre-line; }
+.cms-job strong { color: var(--primary); }
+.has-banner-image { position: relative; overflow: hidden; }
+.cms-banner-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .18; pointer-events: none; }
+.has-banner-image > .container { position: relative; }
+[data-cms], .cms-service h2, .cms-news-body h2 { overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+  .home-hero-grid { grid-template-columns: 1fr; max-width: 760px; gap: 32px; }
+  .home-hero-copy { text-align: center; }
+  .home-hero-copy .hero-actions { justify-content: center; }
+  .enquiry-card { text-align: left; }
+}
+@media (max-width: 600px) {
+  body[data-page="index"] .hero { padding: 34px 0 60px; }
+  .home-hero-copy .hero-title { font-size: 1.85rem; }
+  .home-hero-copy .hero-desc { font-size: .88rem; }
+  .enquiry-card { padding: 22px 18px; border-radius: 12px; }
+  .enquiry-form .form-row { grid-template-columns: 1fr; gap: 0; }
+  .enquiry-form input, .enquiry-form select, .enquiry-form textarea { font-size: 16px; }
+  .product-info { padding: 20px; }
+  .product-title { min-height: 0; }
+  .cms-service h2 { font-size: 1.4rem; }
+  .brand-name .brand-company { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .product-card { transition: none; }
+  .product-card:hover { transform: none; }
+}
+.project-thumb > img { width: 100%; height: 100%; object-fit: cover; }
+.project-thumb .cms-image-placeholder { width: 100%; }
+.project-thumb .cms-image-placeholder span { display: none; }
+@media (max-width: 1000px) {
+  body:has(#contact-form :focus) .mobile-bottom-nav { visibility: hidden; }
+}

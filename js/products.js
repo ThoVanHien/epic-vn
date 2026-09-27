@@ -1,5 +1,5 @@
 /** Shared catalog for the home page and product page. No GitHub account is hardcoded. */
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('[data-products]');
   if (!grid) return;
   const message = document.querySelector('[data-products-message]');
@@ -7,12 +7,11 @@
   const filters = [...document.querySelectorAll('.product-filter-btn')];
   const overlay = document.getElementById('product-modal-overlay');
   const closeButton = document.getElementById('product-modal-close');
-  const categories = {
-    'transformer-panel': 'Trạm Biến Áp & Tủ Điện',
-    switchgear: 'Khí Cụ Đóng Cắt',
-    'cable-tray': 'Cáp Điện & Thang Máng Cáp',
-    automation: 'Đo Lường & Tự Động Hoá',
-  };
+  const settings = window.EpicSite || {};
+  const zaloURL = settings.zalo ||
+    document.querySelector('a[data-contact="zalo"]')?.getAttribute('href') ||
+    'https://zalo.me/0989584595';
+  const categories = Object.fromEntries((settings.categories || []).map(c => [c.id, c.title]));
   let products = [];
   let loaded = false;
   let opener;
@@ -23,14 +22,17 @@
   const normalize = (value) => String(value ?? '').normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
   const specs = (product) => Array.isArray(product.specs) ? product.specs : [];
-  const quote = (product) => `https://zalo.me/0989584595?text=${encodeURIComponent(
-    `Xin chào EPIC VIETNAM, tôi muốn nhận báo giá sản phẩm: ${product.title} (${product.model || ''})`,
-  )}`;
+  const quote = (product) => {
+    const message = `Xin chào ${settings.company || 'EPIC VIETNAM'}, tôi muốn nhận báo giá sản phẩm: ${product.title} (${product.model || ''})`;
+    const url = new URL(zaloURL);
+    url.searchParams.set('text', message);
+    return url.href;
+  };
   // CMS media paths are relative to this site, including on /repository/ Pages URLs.
   function imagePath(value) {
     if (typeof value !== 'string' || !value.trim()) return '';
     const path = value.trim().replace(/^\/+/, '');
-    if (!path.startsWith('images/products/') || path.split('/').includes('..') || /[\\:]/.test(path)) return '';
+    if (!path.startsWith('images/') || path.split('/').includes('..') || /[\\:]/.test(path)) return '';
     return path;
   }
   const placeholder = '<div class="product-img-placeholder"><i data-lucide="image" class="placeholder-icon"></i><span class="placeholder-text">Hình ảnh thiết bị</span></div>';
@@ -59,13 +61,15 @@
       .filter((p) => normalize(`${p.title} ${p.model || ''} ${p.brand || ''}`).includes(query));
     grid.innerHTML = shown.map((p) => `
       <div class="product-card" data-product-cat="${escape(p.category)}">
-        <div class="product-badge-top"><span class="badge-brand">${escape(p.brand || 'EPIC VIETNAM')}</span><span class="badge-status${p.status === 'Sẵn hàng' ? '' : ' order'}">${escape(p.status || 'Liên hệ')}</span></div>
+        <div class="product-badge-top"><span class="badge-brand">${escape(p.brand || settings.company || '')}</span><span class="badge-status${p.status === 'Sẵn hàng' ? '' : ' order'}">${escape(p.status || 'Liên hệ')}</span></div>
         <div class="product-thumb">${photo(p)}</div>
         <div class="product-info">
           <span class="product-category-label">${escape(categories[p.category] || p.category)}</span>
           <h3 class="product-title">${escape(p.title)}</h3>
-          <div class="product-model"><i data-lucide="tag" style="width:14px;height:14px"></i> Model: ${escape(p.model || 'Đang cập nhật')}</div>
-          <ul class="product-specs-list">${specs(p).map((s) => `<li><i data-lucide="check"></i>${escape(s)}</li>`).join('')}</ul>
+          <ul class="product-specs-list">
+            <li class="product-model"><span class="spec-dot" aria-hidden="true"></span><span>Model: ${escape(p.model || 'Đang cập nhật')}</span></li>
+            ${specs(p).slice(0, 3).map((s) => `<li><span class="spec-dot" aria-hidden="true"></span><span>${escape(s)}</span></li>`).join('')}
+          </ul>
           <div class="product-pricing"><span class="price-label">Giá:</span><span class="price-value contact">${escape(p.price || 'Liên hệ báo giá')}</span></div>
           <div class="product-actions">
             <a href="${escape(quote(p))}" target="_blank" rel="noopener noreferrer" class="btn-zalo-quote"><img src="assets/icons/zalo.svg" class="zalo-button-icon" width="24" height="24" alt="" aria-hidden="true"> Báo giá Zalo</a>
@@ -112,7 +116,7 @@
     document.getElementById('modal-product-description').textContent = product.description || '';
     document.getElementById('modal-zalo-link').href = quote(product);
     overlay.querySelector('.modal-img-wrap').innerHTML = photo(product);
-    const rows = [['Thương hiệu', product.brand || 'EPIC VIETNAM'], ['Tình trạng', product.status || 'Liên hệ'], ...specs(product).map((s, i) => [`Thông số ${i + 1}`, s])];
+    const rows = [['Thương hiệu', product.brand || settings.company || ''], ['Tình trạng', product.status || 'Liên hệ'], ...specs(product).map((s, i) => [`Thông số ${i + 1}`, s])];
     overlay.querySelector('.modal-specs-table tbody').innerHTML = rows.map(([label, value]) => `<tr><td>${escape(label)}</td><td>${escape(value)}</td></tr>`).join('');
     previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -151,4 +155,4 @@
       message.textContent = 'Không tải được danh sách sản phẩm. Vui lòng tải lại trang hoặc liên hệ để được tư vấn.';
     })
     .finally(() => grid.setAttribute('aria-busy', 'false'));
-})();
+});

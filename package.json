@@ -1,0 +1,13 @@
+{
+  "name": "epic-vietnam-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/content.test.mjs",
+    "dev": "npm run build && python3 -m http.server 8000 --directory dist"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": { "cheerio": "1.2.0" },
+  "devDependencies": { "yaml": "2.8.3" }
+}

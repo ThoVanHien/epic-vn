@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "Liên Hệ & Đặt Lịch Khảo Sát - EPIC VIETNAM",
+    "description": "Liên hệ khảo sát kỹ thuật hiện trường miễn phí cho trạm biến áp, hệ thống điện nhà xưởng M&E tại Bình Dương."
+  },
+  "section_1": {
+    "text_1": "Liên Hệ & Đặt Lịch Khảo Sát",
+    "text_2": "Kỹ sư của EPIC VIETNAM luôn sẵn sàng tiếp nhận thông tin và có mặt tại nhà máy của Quý khách nhanh chóng nhất."
+  },
+  "section_2": {
+    "text_1": "Đăng Ký Khảo Sát Kỹ Thuật Trực Tiếp",
+    "text_2": "Điền thông tin để soạn yêu cầu khảo sát qua email. Bạn cũng có thể gọi điện hoặc liên hệ Zalo để trao đổi trực tiếp.",
+    "text_3": "Tên doanh nghiệp / Nhà máy (không bắt buộc)",
+    "text_4": "Người đại diện liên hệ *",
+    "text_5": "Số điện thoại di động *",
+    "text_6": "Địa chỉ Email",
+    "text_7": "Vị trí nhà máy / Khu công nghiệp (không bắt buộc)",
+    "text_8": "Hạng mục cần hỗ trợ kỹ thuật *",
+    "text_9": "Mô tả thêm yêu cầu (Công suất dự kiến, diện tích xưởng, thời gian mong muốn...)",
+    "text_10": "Soạn yêu cầu qua email",
+    "text_11": "Mở ứng dụng email với nội dung đã điền. Bạn kiểm tra và bấm gửi trong ứng dụng email.",
+    "text_12": "Văn Phòng & Trụ Sở Chính",
+    "text_13": "Địa chỉ công ty",
+    "text_14": "Đường dây nóng Kỹ thuật (24/7)",
+    "text_15": "Email Hỗ trợ",
+    "text_16": "Mã số thuế doanh nghiệp",
+    "text_17": "Thời gian làm việc: Thứ 2 - Thứ 7: 7h30 - 17h30 (Đội xử lý sự cố khẩn cấp trực sẵn sàng 24/7)"
+  },
+  "banner_image": "",
+  "form_hints": {
+    "hint_1": "Tên công ty",
+    "hint_2": "Họ và tên",
+    "hint_3": "Số điện thoại liên lạc",
+    "hint_4": "email@congty.com",
+    "hint_5": "Ví dụ: Đường số 8, KCN VSIP II, Bến Cát, Bình Dương",
+    "hint_6": "Nhập chi tiết yêu cầu kỹ thuật nếu có..."
+  }
+}

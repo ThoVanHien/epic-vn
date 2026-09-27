@@ -1,9 +1,93 @@
+# Cấu hình CMS: sửa nội dung trong các biểu mẫu, không đổi khóa name.
 media:
-  input: images/products
-  output: images/products
-  extensions: [jpg, jpeg, png, webp, gif, avif]
-  rename: safe
+  - name: images
+    label: Hình ảnh
+    input: images
+    output: images
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      - gif
+      - avif
+    rename: safe
+  - name: documents
+    label: Tài liệu PDF
+    input: assets/documents
+    output: assets/documents
+    extensions:
+      - pdf
+    rename: safe
 content:
+  - name: site
+    label: Thông tin chung & liên hệ
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: company
+        label: Tên thương hiệu
+        type: string
+        required: true
+      - name: legal_name
+        label: Tên pháp lý doanh nghiệp
+        type: string
+      - name: tagline
+        label: Dòng mô tả dưới logo
+        type: string
+      - name: logo
+        label: Logo
+        type: image
+        options:
+          media: images
+      - name: phone
+        label: Số điện thoại (chỉ số, có thể bắt đầu bằng +)
+        type: string
+        required: true
+      - name: phone_label
+        label: Số điện thoại hiển thị
+        type: string
+        required: true
+      - name: email
+        label: Email nhận yêu cầu tư vấn
+        type: string
+        required: true
+      - name: address
+        label: Địa chỉ
+        type: text
+      - name: tax_id
+        label: Mã số thuế
+        type: string
+      - name: bank_name
+        label: Ngân hàng
+        type: string
+      - name: bank_account
+        label: Số tài khoản
+        type: string
+      - name: hours
+        label: Giờ làm việc
+        type: string
+      - name: zalo
+        label: Đường dẫn Zalo
+        type: string
+      - name: messenger
+        label: Đường dẫn Messenger
+        type: string
+      - name: facebook
+        label: Đường dẫn Facebook
+        type: string
+      - name: footer_description
+        label: Giới thiệu ở chân trang
+        type: text
+      - name: copyright
+        label: Dòng bản quyền
+        type: string
+      - name: profile_pdf
+        label: File hồ sơ năng lực PDF (bỏ trống để nhận qua Zalo)
+        type: file
+        options:
+          media: documents
   - name: catalog
     label: Sản phẩm
     type: file
@@ -27,18 +111,13 @@ content:
             type: string
           - name: category
             label: Danh mục
-            type: select
+            type: reference
             required: true
             options:
-              values:
-                - name: transformer-panel
-                  label: Trạm Biến Áp & Tủ Điện
-                - name: switchgear
-                  label: Khí Cụ Đóng Cắt
-                - name: cable-tray
-                  label: Cáp Điện & Thang Máng Cáp
-                - name: automation
-                  label: Đo Lường & Tự Động Hoá
+              collection: categories
+              search: title
+              value: "{fields.id}"
+              label: "{fields.title}"
           - name: brand
             label: Thương hiệu
             type: string
@@ -53,6 +132,8 @@ content:
           - name: image
             label: Ảnh sản phẩm
             type: image
+            options:
+              media: images
           - name: specs
             label: Thông số kỹ thuật (mỗi mục một thông số)
             type: string
@@ -68,3 +149,1018 @@ content:
             label: Nổi bật trên trang chủ
             type: boolean
             default: false
+  - name: categories
+    label: Danh mục sản phẩm
+    type: collection
+    path: data/categories
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      primary: title
+      sort: order
+      order: asc
+    fields:
+      - name: id
+        label: Mã danh mục (giữ nguyên khi đổi tên)
+        type: string
+        required: true
+        description: Chỉ dùng chữ thường, số và dấu gạch ngang. Chuyển sản phẩm sang danh mục khác trước khi xóa.
+      - name: title
+        label: Tên danh mục
+        type: string
+        required: true
+      - name: order
+        label: Thứ tự hiển thị
+        type: number
+        default: 1
+  - name: services
+    label: Danh sách dịch vụ
+    type: file
+    path: data/services.json
+    format: json
+    fields:
+      - name: items
+        label: Danh sách dịch vụ
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: Mã đường dẫn (không dấu, ví dụ transformer)
+            type: string
+            required: true
+          - name: title
+            label: Tên dịch vụ
+            type: string
+            required: true
+          - name: description
+            label: Giới thiệu
+            type: text
+          - name: details
+            label: Hạng mục thực hiện
+            type: string
+            list: true
+          - name: image
+            label: Ảnh minh họa
+            type: image
+            options:
+              media: images
+          - name: highlight
+            label: Điểm nổi bật
+            type: string
+          - name: note
+            label: Ghi chú
+            type: text
+          - &a1
+            name: visible
+            label: Hiển thị
+            type: boolean
+            default: true
+  - name: news
+    label: Bài viết
+    type: file
+    path: data/news.json
+    format: json
+    fields:
+      - name: items
+        label: Bài viết
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: Mã bài viết (không dấu, không khoảng trắng)
+            type: string
+            required: true
+          - name: title
+            label: Tiêu đề
+            type: string
+            required: true
+          - name: category
+            label: Chuyên mục
+            type: string
+          - name: date
+            label: Ngày hiển thị (ngày/tháng/năm)
+            type: string
+          - name: summary
+            label: Tóm tắt
+            type: text
+          - name: body
+            label: Nội dung bài viết (xuống dòng để chia đoạn)
+            type: text
+          - name: image
+            label: Ảnh đại diện
+            type: image
+            options:
+              media: images
+          - *a1
+  - name: jobs
+    label: Vị trí tuyển dụng
+    type: file
+    path: data/jobs.json
+    format: json
+    fields:
+      - name: items
+        label: Vị trí tuyển dụng
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Vị trí tuyển dụng
+            type: string
+            required: true
+          - name: location
+            label: Hình thức và địa điểm
+            type: string
+          - name: requirements
+            label: Yêu cầu
+            type: text
+          - name: salary
+            label: Mức lương
+            type: string
+          - *a1
+  - name: pages
+    label: Nội dung các trang
+    type: group
+    items:
+      - name: page_index
+        label: Trang chủ
+        type: file
+        path: data/pages/index.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: hero
+            label: Đầu trang — lời giới thiệu
+            type: object
+            fields:
+              - name: badge
+                label: Nhãn giới thiệu
+                type: string
+              - name: title
+                label: Tiêu đề chính
+                type: string
+              - name: description
+                label: Mô tả ngắn
+                type: text
+              - name: primary_label
+                label: Nút yêu cầu tư vấn
+                type: string
+              - name: secondary_label
+                label: Nút hồ sơ năng lực
+                type: string
+              - name: secondary_url
+                label: Đường dẫn nút hồ sơ
+                type: string
+          - name: enquiry
+            label: Form tư vấn — lời hướng dẫn
+            type: object
+            fields:
+              - name: eyebrow
+                label: Dòng giới thiệu nhỏ
+                type: string
+              - name: title
+                label: Tiêu đề form
+                type: string
+              - name: description
+                label: Hướng dẫn điền thông tin
+                type: text
+              - name: service_label
+                label: Nhãn chọn nhu cầu
+                type: string
+              - name: submit_label
+                label: Nhãn nút soạn email
+                type: string
+              - name: help
+                label: Giải thích cách gửi email
+                type: text
+              - name: direct_label
+                label: Gợi ý liên hệ trực tiếp
+                type: string
+          - name: section_3
+            label: Giới thiệu dịch vụ (danh sách lấy từ mục Dịch vụ)
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Năng lực cốt lõi"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Dịch Vụ Kỹ Thuật Chuyên Sâu"
+                type: string
+              - name: text_3
+                label: "Nội dung: Giải pháp toàn diện từ khảo sát, thiết kế bản vẽ kỹ thuật, thẩm …"
+                type: text
+          - name: section_4
+            label: Dự án tiêu biểu
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Dự án thực tế"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Công Trình Tiêu Biểu"
+                type: string
+              - name: text_3
+                label: "Nội dung: Các công trình thi công cơ điện và trạm biến áp đã bàn giao đạt …"
+                type: text
+              - name: text_22
+                label: "Nút / liên kết: Liên Hệ Tư Vấn Dự Án"
+                type: string
+              - name: link_23
+                label: "Đường dẫn: Liên Hệ Tư Vấn Dự Án"
+                type: string
+          - name: section_5
+            label: Lý do khách hàng lựa chọn
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Cam kết dịch vụ"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Tại Sao Khách Hàng Chọn EPIC VIETNAM?"
+                type: string
+          - name: section_6
+            label: Giới thiệu sản phẩm nổi bật
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Thiết Bị Chính Hãng"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Sản Phẩm & Thiết Bị Cơ Điện Phân Phối"
+                type: string
+              - name: text_3
+                label: "Nội dung: Cung ứng thiết bị trạm biến áp, khí cụ đóng cắt và phụ kiện M&E …"
+                type: text
+              - name: text_6
+                label: "Nút / liên kết: Xem Toàn Bộ Danh Mục Sản Phẩm & Thiết Bị"
+                type: string
+              - name: link_7
+                label: "Đường dẫn: Xem Toàn Bộ Danh Mục Sản Phẩm & Thiết Bị"
+                type: string
+          - name: section_7
+            label: Liên hệ cuối trang
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Cùng lên phương án"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Bạn đã có bản vẽ hoặc danh sách thiết bị?"
+                type: string
+              - name: text_3
+                label: "Nội dung: Trao đổi trực tiếp với đội ngũ kỹ thuật để làm rõ yêu cầu và phư…"
+                type: string
+              - name: text_4
+                label: "Nút / liên kết: Nhập yêu cầu tư vấn"
+                type: string
+              - name: text_5
+                label: "Tiêu đề: Thông Tin Doanh Nghiệp"
+                type: string
+              - name: text_6
+                label: "Tiêu đề: Trụ sở chính"
+                type: string
+              - name: text_7
+                label: "Tiêu đề: Hotline 24/7"
+                type: string
+              - name: text_8
+                label: "Tiêu đề: Email Kỹ thuật"
+                type: string
+              - name: text_9
+                label: "Tiêu đề: Mã số thuế"
+                type: string
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+          - name: form_hints
+            label: Gợi ý trong các ô nhập yêu cầu
+            type: object
+            fields:
+              - name: hint_1
+                label: "Gợi ý nhập: Họ và tên"
+                type: string
+              - name: hint_2
+                label: "Gợi ý nhập: Số điện thoại"
+                type: string
+              - name: hint_3
+                label: "Gợi ý nhập: Mô tả yêu cầu (không bắt buộc)"
+                type: string
+          - name: stats
+            label: Các số liệu nổi bật
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tên chỉ số
+                type: string
+              - name: value
+                label: Giá trị hiển thị (ví dụ 250+ hoặc 24/7)
+                type: string
+          - name: projects
+            label: Danh sách dự án tiêu biểu
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tên dự án
+                type: string
+              - name: category
+                label: Loại công trình
+                type: string
+              - name: location
+                label: Địa điểm
+                type: string
+              - name: badge
+                label: Nhãn trên ảnh
+                type: string
+              - name: scale
+                label: Quy mô
+                type: string
+              - name: year
+                label: Năm thực hiện
+                type: string
+              - name: image
+                label: Ảnh dự án
+                type: image
+                options:
+                  media: images
+              - name: visible
+                label: Hiển thị
+                type: boolean
+                default: true
+          - name: features
+            label: Các lý do khách hàng lựa chọn
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tiêu đề
+                type: string
+              - name: description
+                label: Mô tả
+                type: text
+              - name: visible
+                label: Hiển thị
+                type: boolean
+                default: true
+      - name: page_about
+        label: Giới thiệu
+        type: file
+        path: data/pages/about.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Về Chúng Tôi
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Về Chúng Tôi"
+                type: string
+              - name: text_2
+                label: "Nội dung: Đối tác tin cậy đồng hành cùng sự an toàn và vận hành liên tục c…"
+                type: text
+          - name: section_2
+            label: Hơn 10 Năm Kinh Nghiệm Trong Ngành Cơ Điện Công Nghiệp
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Khởi nguồn & Năng lực"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Hơn 10 Năm Kinh Nghiệm Trong Ngành Cơ Điện Công Nghiệp"
+                type: string
+              - name: text_3
+                label: "Nội dung: Được thành lập với sứ mệnh mang đến cho các khu công nghiệp tại …"
+                type: text
+              - name: text_4
+                label: "Nội dung: Từ các trạm biến áp dung lượng lớn đến hệ thống phân phối busway…"
+                type: text
+              - name: text_5
+                label: "Tiêu đề: Kỹ Thuật Chuẩn Quốc Tế"
+                type: string
+              - name: text_6
+                label: "Nội dung: Áp dụng tiêu chuẩn IEC, TCVN và quy định an toàn điện lực EVN."
+                type: string
+              - name: text_7
+                label: "Tiêu đề: Bảo Hành Lên Tới 24 Tháng"
+                type: string
+              - name: text_8
+                label: "Nội dung: Cam kết đồng hành và kiểm định định kỳ suốt vòng đời vận hành."
+                type: string
+              - name: text_9
+                label: "Tiêu đề: Giá Trị Cốt Lõi"
+                type: string
+              - name: text_10
+                label: "Tiêu đề: 1. An Toàn Là Tiên Quyết"
+                type: string
+              - name: text_11
+                label: "Nội dung: Không có sự thỏa hiệp nào về an toàn tính mạng con người và thiế…"
+                type: string
+              - name: text_12
+                label: "Tiêu đề: 2. Chuẩn Kỹ Thuật & Tiến Độ"
+                type: string
+              - name: text_13
+                label: "Nội dung: Thi công đúng bản vẽ thiết kế, vật tư minh bạch nguồn gốc CO/CQ …"
+                type: string
+              - name: text_14
+                label: "Tiêu đề: 3. Tận Tâm & Trách Nhiệm 24/7"
+                type: string
+              - name: text_15
+                label: "Nội dung: Hỗ trợ khẩn cấp bất kể ngày đêm, ngày nghỉ nhằm duy trì dây chuy…"
+                type: string
+          - name: section_3
+            label: Thông Tin Doanh Nghiệp Chính Thức
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Hồ sơ năng lực pháp lý"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Thông Tin Doanh Nghiệp Chính Thức"
+                type: string
+              - name: text_3
+                label: "Nội dung: Tên doanh nghiệp:"
+                type: string
+              - name: text_4
+                label: "Nội dung: CÔNG TY TNHH DỊCH VỤ KỸ THUẬT EPIC VIỆT NAM"
+                type: string
+              - name: text_5
+                label: "Nội dung: Tên quốc tế:"
+                type: string
+              - name: text_6
+                label: "Nội dung: EPIC VIETNAM TECHNICAL SERVICE COMPANY LIMITED"
+                type: string
+              - name: text_7
+                label: "Nội dung: Mã số thuế (MST):"
+                type: string
+              - name: text_8
+                label: "Nội dung: 3703511268"
+                type: string
+              - name: text_9
+                label: "Nội dung: Địa chỉ trụ sở chính:"
+                type: string
+              - name: text_10
+                label: "Nội dung: Thời Hòa, Thị xã Bến Cát, Tỉnh Bình Dương, Việt Nam"
+                type: string
+              - name: text_11
+                label: "Nội dung: Số đăng ký kinh doanh:"
+                type: string
+              - name: text_12
+                label: "Nội dung: 0101234567 do Sở KH&ĐT Bình Dương cấp"
+                type: string
+              - name: text_13
+                label: "Nội dung: Tài khoản ngân hàng:"
+                type: string
+              - name: text_14
+                label: "Nội dung: 8 6868 7878 - Ngân hàng TMCP Kỹ thương Việt Nam (Techcombank)"
+                type: string
+              - name: text_15
+                label: "Nút / liên kết: Liên Hệ Hợp Tác Kỹ Thuật"
+                type: string
+              - name: link_16
+                label: "Đường dẫn: Liên Hệ Hợp Tác Kỹ Thuật"
+                type: string
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_services
+        label: Dịch vụ
+        type: file
+        path: data/pages/services.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Dịch Vụ Kỹ Thuật
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Dịch Vụ Kỹ Thuật"
+                type: string
+              - name: text_2
+                label: "Nội dung: Giải pháp kỹ thuật trọn gói từ tư vấn thiết kế, thi công lắp đặt…"
+                type: text
+          - name: section_3
+            label: 5 Bước Triển Khai Kỹ Thuật
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Quy trình chuẩn mực"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: 5 Bước Triển Khai Kỹ Thuật"
+                type: string
+              - name: text_3
+                label: "Nội dung: 1"
+                type: string
+              - name: text_4
+                label: "Tiêu đề: Tiếp Nhận & Khảo Sát"
+                type: string
+              - name: text_5
+                label: "Nội dung: Đo đạc hiện trường và phân tích phụ tải nhà máy."
+                type: string
+              - name: text_6
+                label: "Nội dung: 2"
+                type: string
+              - name: text_7
+                label: "Tiêu đề: Thiết Kế Kỹ Thuật"
+                type: string
+              - name: text_8
+                label: "Nội dung: Lên bản vẽ CAD chi tiết và dự toán minh bạch."
+                type: string
+              - name: text_9
+                label: "Nội dung: 3"
+                type: string
+              - name: text_10
+                label: "Tiêu đề: Thủ Tục Đấu Nối"
+                type: string
+              - name: text_11
+                label: "Nội dung: Hỗ trợ pháp lý, thỏa thuận hồ sơ với Điện lực EVN."
+                type: string
+              - name: text_12
+                label: "Nội dung: 4"
+                type: string
+              - name: text_13
+                label: "Tiêu đề: Thi Công Chuẩn An Toàn"
+                type: string
+              - name: text_14
+                label: "Nội dung: Kỹ sư giám sát 100% thời gian thi công thực tế."
+                type: string
+              - name: text_15
+                label: "Nội dung: 5"
+                type: string
+              - name: text_16
+                label: "Tiêu đề: Nghiệm Thu & Bảo Hành"
+                type: string
+              - name: text_17
+                label: "Nội dung: Đóng điện thành công, bàn giao kèm hồ sơ hoàn công."
+                type: string
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_products
+        label: Trang sản phẩm
+        type: file
+        path: data/pages/products.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Sản Phẩm & Thiết Bị Cơ Điện
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Sản Phẩm & Thiết Bị Cơ Điện"
+                type: string
+              - name: text_2
+                label: "Nội dung: Showroom trưng bày thiết bị trạm biến áp, tủ bảng điện, khí cụ đ…"
+                type: text
+          - name: section_2
+            label: Quý Khách Cần Báo Giá Thiết Bị Cho Dự Án Nhà Xưởng?
+            type: object
+            fields:
+              - name: text_3
+                label: "Nội dung: Tư Vấn & Báo Giá Kỹ Thuật Trọn Gói"
+                type: string
+              - name: text_4
+                label: "Tiêu đề: Quý Khách Cần Báo Giá Thiết Bị Cho Dự Án Nhà Xưởng?"
+                type: string
+              - name: text_5
+                label: "Nội dung: Đội ngũ kỹ sư EPIC VIETNAM sẵn sàng hỗ trợ bóc tách khối lượng (…"
+                type: text
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_news
+        label: Tin tức
+        type: file
+        path: data/pages/news.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Tin Tức & Cẩm Nang Kỹ Thuật
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Tin Tức & Cẩm Nang Kỹ Thuật"
+                type: string
+              - name: text_2
+                label: "Nội dung: Chia sẻ kiến thức chuyên sâu, tiêu chuẩn an toàn điện công nghiệ…"
+                type: text
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_careers
+        label: Tuyển dụng
+        type: file
+        path: data/pages/careers.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Cơ Hội Nghề Nghiệp Tại EPIC VIETNAM
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Cơ Hội Nghề Nghiệp Tại EPIC VIETNAM"
+                type: string
+              - name: text_2
+                label: "Nội dung: Gia nhập đội ngũ kỹ sư cơ điện M&E bản lĩnh, môi trường làm việc…"
+                type: text
+          - name: section_2
+            label: Tại Sao Nên Đồng Hành Cùng EPIC VIETNAM?
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Đãi ngộ & Môi trường"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: Tại Sao Nên Đồng Hành Cùng EPIC VIETNAM?"
+                type: string
+              - name: text_3
+                label: "Tiêu đề: Thu Nhập Cạnh Tranh & Thưởng Dự Án"
+                type: string
+              - name: text_4
+                label: "Nội dung: Lương tháng 13, thưởng nóng theo tiến độ dự án, phụ cấp công trì…"
+                type: text
+              - name: text_5
+                label: "Tiêu đề: Đào Tạo Kỹ Thuật Chuyên Sâu"
+                type: string
+              - name: text_6
+                label: "Nội dung: Được tài trợ tham gia các khóa đào tạo chứng chỉ an toàn điện ca…"
+                type: text
+              - name: text_7
+                label: "Tiêu đề: Bảo Hiểm Toàn Diện 24/7"
+                type: string
+              - name: text_8
+                label: "Nội dung: Trang bị đầy đủ đồ bảo hộ lao động đạt chuẩn quốc tế, bảo hiểm t…"
+                type: text
+              - name: text_9
+                label: "Nội dung: Cơ hội việc làm"
+                type: string
+              - name: text_10
+                label: "Tiêu đề: Vị Trí Đang Tuyển Dụng"
+                type: string
+              - name: text_11
+                label: "Tiêu đề: Bạn Có Câu Hỏi Về Vị Trí Tuyển Dụng?"
+                type: string
+              - name: text_12
+                label: "Nội dung: Liên hệ trực tiếp phòng nhân sự EPIC VIETNAM để được giải đáp ch…"
+                type: text
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_profile
+        label: Hồ sơ năng lực
+        type: file
+        path: data/pages/profile.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Hồ Sơ Năng Lực Doanh Nghiệp
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Hồ Sơ Năng Lực Doanh Nghiệp"
+                type: string
+              - name: text_2
+                label: "Nội dung: Tổng quan năng lực pháp lý, đội ngũ kỹ sư chuyên trách, hệ thống…"
+                type: text
+          - name: section_2
+            label: EPIC VIETNAM - Company Profile & Technical Capability
+            type: object
+            fields:
+              - name: text_1
+                label: "Nội dung: Tài Liệu Chính Thức 2026"
+                type: string
+              - name: text_2
+                label: "Tiêu đề: EPIC VIETNAM - Company Profile & Technical Capability"
+                type: string
+              - name: text_3
+                label: "Nội dung: Bao gồm giấy phép kinh doanh, chứng chỉ năng lực hoạt động xây d…"
+                type: text
+              - name: text_4
+                label: "Nội dung: Pháp lý & Tổ chức"
+                type: string
+              - name: text_5
+                label: "Tiêu đề: Thông Tin Pháp Lý & Năng Lực Doanh Nghiệp"
+                type: string
+              - name: text_6
+                label: "Tiêu đề: Thông Tin Doanh Nghiệp"
+                type: string
+              - name: text_7
+                label: "Nội dung: Tên tiếng Việt:"
+                type: string
+              - name: text_8
+                label: "Nội dung: CÔNG TY TNHH DỊCH VỤ KỸ THUẬT EPIC VIỆT NAM"
+                type: string
+              - name: text_9
+                label: "Nội dung: Tên quốc tế:"
+                type: string
+              - name: text_10
+                label: "Nội dung: EPIC VIETNAM TECHNICAL SERVICE CO., LTD"
+                type: string
+              - name: text_11
+                label: "Nội dung: Lĩnh vực cốt lõi:"
+                type: string
+              - name: text_12
+                label: "Nội dung: Thi công trạm biến áp, tủ điện phân phối, cơ điện M&E nhà máy"
+                type: string
+              - name: text_13
+                label: "Nội dung: Trụ sở kỹ thuật:"
+                type: string
+              - name: text_14
+                label: "Nội dung: Thới Hòa, Thị xã Bến Cát, Tỉnh Bình Dương"
+                type: string
+              - name: text_15
+                label: "Nội dung: Đường dây nóng:"
+                type: string
+              - name: text_16
+                label: "Nội dung: 0989 584 595 (Kỹ sư trực 24/7)"
+                type: string
+              - name: text_17
+                label: "Tiêu đề: Chứng Chỉ & Tiêu Chuẩn Áp Dụng"
+                type: string
+              - name: text_18
+                label: "Nội dung: Chứng chỉ năng lực hoạt động xây dựng: Thi công lắp đặt thiết bị…"
+                type: text
+              - name: text_19
+                label: "Nội dung: Chứng chỉ an toàn điện cao - trung thế: Đội ngũ kỹ sư đạt thẻ an…"
+                type: string
+              - name: text_20
+                label: "Nội dung: Tiêu chuẩn kỹ thuật nghiệm thu: TCVN 7447, IEC 60364, IEC 61439-…"
+                type: string
+              - name: text_21
+                label: "Nội dung: Cơ sở vật chất"
+                type: string
+              - name: text_22
+                label: "Tiêu đề: Danh Mục Thiết Bị Đo Kiểm & Thi Công Hiện Đại"
+                type: string
+              - name: text_23
+                label: "Nội dung: EPIC VIETNAM đầu tư 100% trang thiết bị đo kiểm chuyên dụng được…"
+                type: text
+              - name: text_24
+                label: "Tiêu đề: Camera Nhiệt Hồng Ngoại Fluke Ti401"
+                type: string
+              - name: text_25
+                label: "Nội dung: Kiểm tra điểm phát nhiệt quá tải tại các đầu cosse, thanh cái bu…"
+                type: text
+              - name: text_26
+                label: "Tiêu đề: Máy Đo Phân Tích Chất Lượng Điện"
+                type: string
+              - name: text_27
+                label: "Nội dung: Thiết bị Fluke 435-II đo sóng hài THD, sụt áp, công suất phản kh…"
+                type: text
+              - name: text_28
+                label: "Tiêu đề: Hợp Bộ Thử Cao Áp & Đo Cách Điện"
+                type: string
+              - name: text_29
+                label: "Nội dung: Đo điện trở cách điện Megger 10kV, thử nghiệm cao áp AC/DC cáp n…"
+                type: string
+              - name: text_30
+                label: "Tiêu đề: Máy Đo Điện Trở Tiếp Địa Kyoritsu"
+                type: string
+              - name: text_31
+                label: "Nội dung: Kiểm tra bãi tiếp địa chống sét và hệ thống tiếp địa an toàn trạ…"
+                type: string
+              - name: text_32
+                label: "Tiêu đề: Hệ Thống Ép Cos Thủy Lực & Uốn Đồng"
+                type: string
+              - name: text_33
+                label: "Nội dung: Kìm ép cos pin thủy lực 16 - 630mm², máy gia công thanh cái đồng…"
+                type: string
+              - name: text_34
+                label: "Tiêu đề: Đội Xe Cơ Động Kỹ Thuật 24/7"
+                type: string
+              - name: text_35
+                label: "Nội dung: Xe chuyên dụng chở đầy đủ vật tư thay thế khẩn cấp, có mặt tại h…"
+                type: text
+              - name: text_36
+                label: "Tiêu đề: Cam Kết Năng Lực & An Toàn Vận Hành Tuyệt Đối"
+                type: string
+              - name: text_37
+                label: "Nội dung: Toàn bộ công trình do EPIC VIETNAM thiết kế và thi công đều được…"
+                type: text
+              - name: text_38
+                label: "Nút / liên kết: Đặt Lịch Khảo Sát Hiện Trường"
+                type: string
+              - name: link_39
+                label: "Đường dẫn: Đặt Lịch Khảo Sát Hiện Trường"
+                type: string
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+      - name: page_contact
+        label: Liên hệ
+        type: file
+        path: data/pages/contact.json
+        format: json
+        fields:
+          - name: seo
+            label: Tiêu đề và mô tả trên công cụ tìm kiếm
+            type: object
+            fields:
+              - name: title
+                label: Tiêu đề trang
+                type: string
+                required: true
+              - name: description
+                label: Mô tả
+                type: text
+          - name: section_1
+            label: Liên Hệ & Đặt Lịch Khảo Sát
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Liên Hệ & Đặt Lịch Khảo Sát"
+                type: string
+              - name: text_2
+                label: "Nội dung: Kỹ sư của EPIC VIETNAM luôn sẵn sàng tiếp nhận thông tin và có m…"
+                type: text
+          - name: section_2
+            label: Đăng Ký Khảo Sát Kỹ Thuật Trực Tiếp
+            type: object
+            fields:
+              - name: text_1
+                label: "Tiêu đề: Đăng Ký Khảo Sát Kỹ Thuật Trực Tiếp"
+                type: string
+              - name: text_2
+                label: "Nội dung: Điền thông tin để soạn yêu cầu khảo sát qua email. Bạn cũng có t…"
+                type: text
+              - name: text_3
+                label: "Nhãn nhập liệu: Tên doanh nghiệp / Nhà máy (không bắt buộc)"
+                type: string
+              - name: text_4
+                label: "Nhãn nhập liệu: Người đại diện liên hệ *"
+                type: string
+              - name: text_5
+                label: "Nhãn nhập liệu: Số điện thoại di động *"
+                type: string
+              - name: text_6
+                label: "Nhãn nhập liệu: Địa chỉ Email"
+                type: string
+              - name: text_7
+                label: "Nhãn nhập liệu: Vị trí nhà máy / Khu công nghiệp (không bắt buộc)"
+                type: string
+              - name: text_8
+                label: "Nhãn nhập liệu: Hạng mục cần hỗ trợ kỹ thuật *"
+                type: string
+              - name: text_9
+                label: "Nhãn nhập liệu: Mô tả thêm yêu cầu (Công suất dự kiến, diện tích xưởng, thời gia…"
+                type: string
+              - name: text_10
+                label: "Nút / liên kết: Soạn yêu cầu qua email"
+                type: string
+              - name: text_11
+                label: "Nội dung: Mở ứng dụng email với nội dung đã điền. Bạn kiểm tra và bấm gửi …"
+                type: string
+              - name: text_12
+                label: "Tiêu đề: Văn Phòng & Trụ Sở Chính"
+                type: string
+              - name: text_13
+                label: "Tiêu đề: Địa chỉ công ty"
+                type: string
+              - name: text_14
+                label: "Tiêu đề: Đường dây nóng Kỹ thuật (24/7)"
+                type: string
+              - name: text_15
+                label: "Tiêu đề: Email Hỗ trợ"
+                type: string
+              - name: text_16
+                label: "Tiêu đề: Mã số thuế doanh nghiệp"
+                type: string
+              - name: text_17
+                label: "Nội dung: Thời gian làm việc: Thứ 2 - Thứ 7: 7h30 - 17h30 (Đội xử lý sự cố…"
+                type: string
+          - name: banner_image
+            label: Ảnh nền đầu trang (không bắt buộc)
+            type: image
+            options:
+              media: images
+          - name: form_hints
+            label: Gợi ý trong các ô nhập yêu cầu
+            type: object
+            fields:
+              - name: hint_1
+                label: "Gợi ý nhập: Tên doanh nghiệp / Nhà máy (không bắt buộc)"
+                type: string
+              - name: hint_2
+                label: "Gợi ý nhập: Người đại diện liên hệ"
+                type: string
+              - name: hint_3
+                label: "Gợi ý nhập: Số điện thoại di động"
+                type: string
+              - name: hint_4
+                label: "Gợi ý nhập: Địa chỉ Email"
+                type: string
+              - name: hint_5
+                label: "Gợi ý nhập: Vị trí nhà máy / Khu công nghiệp (không bắt buộc)"
+                type: string
+              - name: hint_6
+                label: |-
+                  Gợi ý nhập: Mô tả thêm yêu cầu (Công suất dự kiến, diện tích xưởng, thời
+                                    gian mong muốn...)
+                type: string

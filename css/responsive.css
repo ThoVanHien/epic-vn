@@ -63,10 +63,6 @@
 
 /* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-  body {
-    padding-bottom: calc(90px + env(safe-area-inset-bottom));
-  }
-
   .container {
     padding-left: 16px;
     padding-right: 16px;
